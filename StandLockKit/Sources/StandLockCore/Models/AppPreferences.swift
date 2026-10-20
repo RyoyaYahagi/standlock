@@ -31,6 +31,13 @@ public struct AppPreferences: Codable, Sendable, Equatable {
     public var showFullWorkTimer: Bool
     public var menuBarCountdownMinutes: Int
 
+    /// Global break management switch. Missing values decode as true for existing users.
+    public var standLockEnabled: Bool
+
+    /// When enabled, scheduled breaks run only on an SSID in `allowedWiFiSSIDs`.
+    public var homeWiFiOnly: Bool
+    public var allowedWiFiSSIDs: [String]
+
     public init(
         gentleDailySkipLimit: Int = 5,
         firmSkipDelay: TimeInterval = 10,
@@ -49,7 +56,10 @@ public struct AppPreferences: Codable, Sendable, Equatable {
         pauseMediaDuringBreak: Bool = true,
         resetIntervalOnSkip: Bool = true,
         showFullWorkTimer: Bool = false,
-        menuBarCountdownMinutes: Int = 1
+        menuBarCountdownMinutes: Int = 1,
+        standLockEnabled: Bool = true,
+        homeWiFiOnly: Bool = false,
+        allowedWiFiSSIDs: [String] = []
     ) {
         self.gentleDailySkipLimit = gentleDailySkipLimit
         self.firmSkipDelay = firmSkipDelay
@@ -69,6 +79,9 @@ public struct AppPreferences: Codable, Sendable, Equatable {
         self.resetIntervalOnSkip = resetIntervalOnSkip
         self.showFullWorkTimer = showFullWorkTimer
         self.menuBarCountdownMinutes = menuBarCountdownMinutes
+        self.standLockEnabled = standLockEnabled
+        self.homeWiFiOnly = homeWiFiOnly
+        self.allowedWiFiSSIDs = allowedWiFiSSIDs
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -82,6 +95,7 @@ public struct AppPreferences: Codable, Sendable, Equatable {
         case pauseMediaDuringBreak
         case resetIntervalOnSkip
         case showFullWorkTimer, menuBarCountdownMinutes
+        case standLockEnabled, homeWiFiOnly, allowedWiFiSSIDs
     }
 
     public init(from decoder: Decoder) throws {
@@ -104,6 +118,9 @@ public struct AppPreferences: Codable, Sendable, Equatable {
         resetIntervalOnSkip = try c.decodeIfPresent(Bool.self, forKey: .resetIntervalOnSkip) ?? true
         showFullWorkTimer = try c.decodeIfPresent(Bool.self, forKey: .showFullWorkTimer) ?? false
         menuBarCountdownMinutes = try c.decodeIfPresent(Int.self, forKey: .menuBarCountdownMinutes) ?? 1
+        standLockEnabled = try c.decodeIfPresent(Bool.self, forKey: .standLockEnabled) ?? true
+        homeWiFiOnly = try c.decodeIfPresent(Bool.self, forKey: .homeWiFiOnly) ?? false
+        allowedWiFiSSIDs = try c.decodeIfPresent([String].self, forKey: .allowedWiFiSSIDs) ?? []
     }
 }
 

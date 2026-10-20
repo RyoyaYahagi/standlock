@@ -2,7 +2,7 @@ import AppKit
 import StandLockCore
 
 enum MenuBarIcon {
-    static func make(progress: Double) -> NSImage {
+    static func make(progress: Double, isEnabled: Bool = true) -> NSImage {
         let size: CGFloat = 18
         let image = NSImage(size: NSSize(width: size, height: size), flipped: false) { rect in
             let center = CGPoint(x: rect.midX, y: rect.midY)
@@ -20,6 +20,17 @@ enum MenuBarIcon {
             let circle = NSBezierPath(ovalIn: circleRect)
             circle.lineWidth = strokeWidth
             circle.stroke()
+
+            if !isEnabled {
+                for offset: CGFloat in [-2.5, 0.7] {
+                    let bar = NSBezierPath(roundedRect: CGRect(
+                        x: center.x + offset, y: center.y - 3,
+                        width: 1.8, height: 6
+                    ), xRadius: 0.9, yRadius: 0.9)
+                    bar.fill()
+                }
+                return true
+            }
 
             switch ProgressDisplayBranch(progress: progress) {
             case .empty:

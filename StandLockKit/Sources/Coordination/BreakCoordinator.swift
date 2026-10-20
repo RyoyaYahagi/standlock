@@ -21,16 +21,27 @@ public struct EnforcementState: Sendable {
     /// because the slot decides which schedule's break fires, not only when.
     public var pendingBreakScheduleID: UUID?
     public var pendingBreakDate: Date?
+    /// Each schedule keeps its deadline while another schedule's break is processed.
+    public var scheduledBreakDates: [UUID: Date]
 
     public init(dailyBreakCounts: [UUID: Int] = [:], escalationTiers: [UUID: Int] = [:],
                 cycleIndices: [UUID: Int] = [:], repetitionIndices: [UUID: Int] = [:],
-                pendingBreakScheduleID: UUID? = nil, pendingBreakDate: Date? = nil) {
+                pendingBreakScheduleID: UUID? = nil, pendingBreakDate: Date? = nil,
+                scheduledBreakDates: [UUID: Date] = [:]) {
         self.dailyBreakCounts = dailyBreakCounts
         self.escalationTiers = escalationTiers
         self.cycleIndices = cycleIndices
         self.repetitionIndices = repetitionIndices
         self.pendingBreakScheduleID = pendingBreakScheduleID
         self.pendingBreakDate = pendingBreakDate
+        self.scheduledBreakDates = scheduledBreakDates
+    }
+
+    /// Drops a scheduled slot when the service is suspended by a global or network gate.
+    public mutating func discardPendingBreak() {
+        pendingBreakScheduleID = nil
+        pendingBreakDate = nil
+        scheduledBreakDates.removeAll()
     }
 }
 
@@ -61,6 +72,7 @@ public final class BreakCoordinator {
     /// When the pending slot is due. Kept so a skip that is not allowed to reset the interval
     /// can measure the next one from the slot it skipped instead of from the moment of the skip.
     private var pendingBreakDate: Date?
+    private var scheduledBreakDates: [UUID: Date] = [:]
     /// True only while the deferral poll loop owns `breakTimer`. That loop is suspended between
     /// polls, so anything that re-arms the timer cancels it and drops the deferred break.
     private var isDeferringBreak = false
@@ -100,6 +112,8 @@ public final class BreakCoordinator {
         dailyBreakCounts = state.dailyBreakCounts
         escalationTiers = state.escalationTiers
         cycleIndices = state.cycleIndices
+        let enabledIDs = Set(schedules.filter(\.isEnabled).map(\.id))
+        scheduledBreakDates = state.scheduledBreakDates.filter { enabledIDs.contains($0.key) }
         for schedule in schedules {
             if let rule = schedule.repetitionRule {
                 repetitionTrackers[schedule.id] = RepetitionTracker(
@@ -109,6 +123,7 @@ public final class BreakCoordinator {
         }
         if let id = state.pendingBreakScheduleID, let date = state.pendingBreakDate {
             restoredPendingBreak = (id, date)
+            scheduledBreakDates[id] = date
         }
         scheduleNextBreak()
     }
@@ -121,7 +136,8 @@ public final class BreakCoordinator {
             cycleIndices: cycleIndices,
             repetitionIndices: repetitionTrackers.mapValues(\.currentBreakIndex),
             pendingBreakScheduleID: pendingBreakScheduleID,
-            pendingBreakDate: pendingBreakDate
+            pendingBreakDate: pendingBreakDate,
+            scheduledBreakDates: scheduledBreakDates
         )
     }
 
@@ -129,6 +145,7 @@ public final class BreakCoordinator {
         breakTimer?.cancel()
         breakTimer = nil
         clearPendingBreak()
+        scheduledBreakDates.removeAll()
         if locker.isShowing { locker.dismissOverlay() }
         currentBreak = nil
         currentSchedule = nil
@@ -139,6 +156,7 @@ public final class BreakCoordinator {
         breakTimer?.cancel()
         breakTimer = nil
         clearPendingBreak()
+        scheduledBreakDates.removeAll()
         isPaused = true
         let until = Date().addingTimeInterval(duration)
         eventContinuation.yield(.schedulePaused(until: until))
@@ -179,6 +197,7 @@ public final class BreakCoordinator {
         escalationTiers.removeAll()
         // Every day starts the interval cycle from its first entry.
         cycleIndices.removeAll()
+        scheduledBreakDates.removeAll()
         eventContinuation.yield(.statisticsUpdated(statistics))
         return true
     }
@@ -221,6 +240,7 @@ public final class BreakCoordinator {
         breakTimer?.cancel()
         breakTimer = nil
         clearPendingBreak()
+        scheduledBreakDates.removeAll()
         if locker.isShowing {
             locker.dismissOverlay()
             if let event = currentBreak {
@@ -319,6 +339,9 @@ public final class BreakCoordinator {
     /// The pending slot and the deferral flag always end together: whoever concludes a slot
     /// concludes the poll that was waiting on it.
     private func clearPendingBreak() {
+        if let id = pendingBreakScheduleID {
+            scheduledBreakDates.removeValue(forKey: id)
+        }
         pendingBreakScheduleID = nil
         pendingBreakDate = nil
         isDeferringBreak = false
@@ -357,9 +380,19 @@ public final class BreakCoordinator {
             }
         }
         for schedule in activeSchedules where schedule.isEnabled {
-            if isCapReached(schedule) { continue }
-            if let next = scheduler.nextBreakTime(for: schedule, after: searchFrom ?? now,
-                                                  cycleIndex: cycleIndices[schedule.id, default: 0]) {
+            if isCapReached(schedule) {
+                scheduledBreakDates.removeValue(forKey: schedule.id)
+                continue
+            }
+            let fresh = scheduler.nextBreakTime(for: schedule, after: searchFrom ?? now,
+                                                cycleIndex: cycleIndices[schedule.id, default: 0])
+            var next = fresh
+            if let retained = scheduledBreakDates[schedule.id], retained > now,
+               scheduler.isWithinActiveWindow(schedule, at: retained) {
+                next = fresh.map { min($0, retained) } ?? retained
+            }
+            scheduledBreakDates[schedule.id] = next
+            if let next {
                 if earliest == nil || next < earliest!.date {
                     earliest = (next, schedule)
                 }
@@ -382,9 +415,13 @@ public final class BreakCoordinator {
             let earlyDelay = max(0, delay - leadTime)
             if earlyDelay > 0 { try? await Task.sleep(for: .seconds(earlyDelay)) }
             guard !Task.isCancelled else { return }
-            let context = await self.detector.currentContext()
+            // Warm up detection before the deadline, but do not use that snapshot to
+            // open an overlay: a call can start during the final three seconds.
+            _ = await self.detector.currentContext()
             let remaining = fireDate.timeIntervalSince(Date())
             if remaining > 0 { try? await Task.sleep(for: .seconds(remaining)) }
+            guard !Task.isCancelled else { return }
+            let context = await self.detector.currentContext()
             guard !Task.isCancelled else { return }
             await self.triggerBreak(for: target.schedule, context: context)
         }

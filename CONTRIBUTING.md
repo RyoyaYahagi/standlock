@@ -16,6 +16,20 @@ open StandLock.xcodeproj
 
 Xcode will complain that it has no account for my signing team. Pick your own team, or "Sign to Run Locally", under Signing & Capabilities, and leave that change out of your commit.
 
+For a personal installation without a development certificate, quit any installed StandLock instance and run:
+
+```bash
+./scripts/install-local.sh
+```
+
+This builds an ad-hoc signed Release app, installs it in `/Applications/StandLock.app`, registers it with LaunchServices for launchers such as Raycast, and checks that it remains running after launch. An optional first argument selects another destination, for example `./scripts/install-local.sh "$HOME/Applications/StandLock.app"`. It uses a temporary entitlement to disable library validation for this local build: ad-hoc signatures have no Team ID, so hardened runtime would otherwise reject the embedded Sparkle framework before the app starts. The distribution entitlements and project signing settings are unchanged. Use a development or Developer ID certificate for builds that need library validation.
+
+For Pelmet, run the installed copy from `/Applications`, rather than the Xcode build in DerivedData. [Pelmet's FAQ](https://github.com/fif7y/pelmet/blob/main/docs/FAQ.md) documents a macOS LaunchServices identity limitation that can hide development builds regardless of their assigned section. Avoid launching duplicate copies while checking menu bar visibility.
+
+You can repeat the launch check separately with `./scripts/check-local-launch.sh`. An exit code of zero from `open` alone does not establish that the app started successfully.
+
+Run `./scripts/check-menu-bar-icon.sh` after changing the menu bar renderer. It checks that ON, OFF and progress states produce visible template images of the expected size. Keep the `MenuBarExtra` label as an `Image` backed by this renderer. The drawing check does not verify on-screen visibility, so also check the menu bar with the timer hidden, with the timer shown, and with StandLock OFF.
+
 The project file is generated from `project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen) and committed, so you don't need XcodeGen installed. Add, move, or delete files through Xcode as usual. The project is regenerated from the folder contents anyway, so nothing you add gets lost. Build settings belong in `project.yml`, since anything set directly in the project file is lost on the next regeneration.
 
 ## Tests

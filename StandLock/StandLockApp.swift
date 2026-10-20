@@ -15,7 +15,11 @@ struct StandLockApp: App {
                     .environmentObject(appDelegate.updateObserver)
             }
         } label: {
-            Image(nsImage: MenuBarIcon.make(progress: appCoordinator.breakProgress))
+            Image(nsImage: MenuBarIcon.make(
+                progress: appCoordinator.breakProgress,
+                isEnabled: appCoordinator.preferences.standLockEnabled
+            ))
+            .accessibilityLabel(Text("StandLock"))
             if let timerText = appCoordinator.menuBarTimerText {
                 Text(timerText)
                     .monospacedDigit()

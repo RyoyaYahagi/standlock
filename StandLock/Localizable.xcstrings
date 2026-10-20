@@ -1,12 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
+    "" : {},
     "   ·   " : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "   ·   "
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "   ·   "
@@ -21,12 +25,24 @@
             "state" : "translated",
             "value" : " · "
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " · "
+          }
         }
       }
     },
     ":" : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ":"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : ":"
@@ -41,6 +57,12 @@
             "state" : "translated",
             "value" : "·"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "·"
+          }
         }
       }
     },
@@ -50,6 +72,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ ve gerçekten ciddiyim"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@、本気です"
           }
         }
       }
@@ -61,12 +89,24 @@
             "state" : "translated",
             "value" : "%@ İzni Verildi"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@へのアクセスを許可しました"
+          }
         }
       }
     },
     "%lld" : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -81,6 +121,12 @@
             "state" : "translated",
             "value" : "%lld tamamlandı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld回完了"
+          }
         }
       }
     },
@@ -90,6 +136,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld günde mola verildi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩を取った日：%lld日"
           }
         }
       }
@@ -101,6 +153,12 @@
             "state" : "translated",
             "value" : "üst üste %lld"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連続%lld回"
+          }
         }
       }
     },
@@ -110,6 +168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "bugün %lld atlandı"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日スキップした休憩：%lld回"
           }
         }
       }
@@ -121,6 +185,12 @@
             "state" : "translated",
             "value" : "Günde %lld atlamadan sonra molalar kapatılamaz olur"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩をすぐ終了できなくなるまでの1日のスキップ上限：%lld回"
+          }
         }
       }
     },
@@ -131,12 +201,24 @@
             "state" : "translated",
             "value" : "%lld sn"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld秒"
+          }
         }
       }
     },
     "•" : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "•"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "•"
@@ -151,6 +233,12 @@
             "state" : "translated",
             "value" : "© 2026 Yılmaz Yağız Dokumacı. MIT Lisansı."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Yılmaz Yağız Dokumacı. MIT License."
+          }
         }
       }
     },
@@ -160,6 +248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "× %lld sn"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "× %lld秒"
           }
         }
       }
@@ -171,12 +265,24 @@
             "state" : "translated",
             "value" : "⌘,"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘,"
+          }
         }
       }
     },
     "⌘Q" : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘Q"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⌘Q"
@@ -192,6 +298,12 @@
             "state" : "translated",
             "value" : "✕"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✕"
+          }
         }
       }
     },
@@ -201,6 +313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1 saat"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1時間"
           }
         }
       }
@@ -212,6 +330,12 @@
             "state" : "translated",
             "value" : "1 dk"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1分"
+          }
         }
       }
     },
@@ -221,6 +345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2 saat"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2時間"
           }
         }
       }
@@ -232,6 +362,12 @@
             "state" : "translated",
             "value" : "2 dk"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2分"
+          }
         }
       }
     },
@@ -241,6 +377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3 dk"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3分"
           }
         }
       }
@@ -252,6 +394,12 @@
             "state" : "translated",
             "value" : "5 dk"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5分"
+          }
         }
       }
     },
@@ -262,12 +410,24 @@
             "state" : "translated",
             "value" : "5 dakikalık molalar"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5分間の休憩"
+          }
         }
       }
     },
     "09:00 – 17:00" : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "09:00 – 17:00"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "09:00 – 17:00"
@@ -284,6 +444,12 @@
             "state" : "translated",
             "value" : "20-20-20 Kuralı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20-20-20ルール"
+          }
         }
       }
     },
@@ -293,6 +459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "30 dakika"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30分"
           }
         }
       }
@@ -304,6 +476,12 @@
             "state" : "translated",
             "value" : "Hakkında"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "情報"
+          }
         }
       }
     },
@@ -313,6 +491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "StandLock Hakkında"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLockについて"
           }
         }
       }
@@ -324,6 +508,12 @@
             "state" : "translated",
             "value" : "Erişilebilirlik"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクセシビリティ"
+          }
         }
       }
     },
@@ -333,6 +523,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Etkin Günler"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有効な曜日"
           }
         }
       }
@@ -344,6 +540,12 @@
             "state" : "translated",
             "value" : "Mola vermeye başlamak için bir program ekleyin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩を始めるにはスケジュールを追加してください。"
+          }
         }
       }
     },
@@ -353,6 +555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Program Ekle"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールを追加"
           }
         }
       }
@@ -364,6 +572,12 @@
             "state" : "translated",
             "value" : "Paylaşım bittikten sonra"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画面共有終了後"
+          }
         }
       }
     },
@@ -373,6 +587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tüm takvimler"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてのカレンダー"
           }
         }
       }
@@ -384,6 +604,12 @@
             "state" : "translated",
             "value" : "Tüm gün"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終日"
+          }
         }
       }
     },
@@ -393,6 +619,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kalan süreyi simgenin yanında hep göster"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイコンの横に残り時間を常に表示"
           }
         }
       }
@@ -404,6 +636,12 @@
             "state" : "translated",
             "value" : "Görünüm"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外観"
+          }
         }
       }
     },
@@ -414,6 +652,12 @@
             "state" : "translated",
             "value" : "Bundan emin misiniz?"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本当にそれでいいですか？"
+          }
         }
       }
     },
@@ -423,6 +667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "\"%@\" silinsin mi?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「%@」を削除しますか？"
           }
         }
       }
@@ -436,6 +686,12 @@
             "state" : "translated",
             "value" : "Kol Çevirme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腕回し"
+          }
         }
       }
     },
@@ -445,6 +701,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otomatik Güncellemeler"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動アップデート"
           }
         }
       }
@@ -456,6 +718,12 @@
             "state" : "translated",
             "value" : "Davranış"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "動作"
+          }
         }
       }
     },
@@ -465,6 +733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "En İyi Seri"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最長連続記録"
           }
         }
       }
@@ -478,6 +752,12 @@
             "state" : "translated",
             "value" : "Bir dahakine bol şans!"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次はうまくいくかもしれません。"
+          }
         }
       }
     },
@@ -489,6 +769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yeniden denemeniz cesurca"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "また挑戦するとは大胆ですね。"
           }
         }
       }
@@ -502,6 +788,12 @@
             "state" : "translated",
             "value" : "Sıkıcı. Bir tane daha yazın."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退屈ですね。別の文を入力してください。"
+          }
         }
       }
     },
@@ -514,6 +806,12 @@
             "state" : "translated",
             "value" : "Kare Nefes"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ボックス呼吸法"
+          }
         }
       }
     },
@@ -523,6 +821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mola Etkinliği"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩の記録"
           }
         }
       }
@@ -534,6 +838,12 @@
             "state" : "translated",
             "value" : "Mola süresi"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩の長さ"
+          }
         }
       }
     },
@@ -543,6 +853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mola sıklığı"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩の間隔"
           }
         }
       }
@@ -554,6 +870,12 @@
             "state" : "translated",
             "value" : "45 dakikada bir mola"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "45分ごとに休憩"
+          }
         }
       }
     },
@@ -563,6 +885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mola sürüyor"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩中"
           }
         }
       }
@@ -574,6 +902,12 @@
             "state" : "translated",
             "value" : "Mola İstatistikleri"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩の統計"
+          }
         }
       }
     },
@@ -583,6 +917,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mola Süresi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩時間"
           }
         }
       }
@@ -594,6 +934,12 @@
             "state" : "translated",
             "value" : "Mola bekliyor"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩待ち"
+          }
         }
       }
     },
@@ -604,6 +950,12 @@
             "state" : "translated",
             "value" : "Molalar"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩"
+          }
         }
       }
     },
@@ -613,6 +965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Molalar bu aralıkları sırayla döner."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩はこれらの間隔を順番に繰り返します。"
           }
         }
       }
@@ -626,6 +984,12 @@
             "state" : "translated",
             "value" : "4 saniye nefes alın, 4 saniye tutun, 4 saniye verin, 4 saniye bekleyin. 3 kez tekrarlayın."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4秒吸って息を止め、4秒かけて吐いて息を止めます。3回繰り返します。"
+          }
         }
       }
     },
@@ -638,6 +1002,12 @@
             "state" : "translated",
             "value" : "Kısa bir ara. Büyük fark."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "少し休むだけで大きく変わります。"
+          }
         }
       }
     },
@@ -648,6 +1018,12 @@
             "state" : "translated",
             "value" : "Takvim"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダー"
+          }
         }
       }
     },
@@ -657,6 +1033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Takvim Erişimi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーへのアクセス"
           }
         }
       }
@@ -670,6 +1052,12 @@
             "state" : "translated",
             "value" : "Takvim etkinliği sürüyor"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーの予定中"
+          }
         }
       }
     },
@@ -679,6 +1067,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Takvim Entegrasyonu"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダー連携"
           }
         }
       }
@@ -690,6 +1084,12 @@
             "state" : "translated",
             "value" : "Takvim Entegrasyonu takvim erişimi gerektirir. Bu özelliği açmak için Sistem Ayarları'ndan izin verin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この機能を使うにはカレンダーへのアクセスが必要です。システム設定で許可してください。"
+          }
         }
       }
     },
@@ -700,6 +1100,12 @@
             "state" : "translated",
             "value" : "Takvim İzni Gerekli"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーへのアクセスが必要です"
+          }
         }
       }
     },
@@ -709,6 +1115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Takvimler"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダー"
           }
         }
       }
@@ -722,6 +1134,12 @@
             "state" : "translated",
             "value" : "Parmak Ucu Yükselme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "かかと上げ"
+          }
         }
       }
     },
@@ -731,6 +1149,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kamera Algılama"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カメラ検出"
           }
         }
       }
@@ -744,6 +1168,12 @@
             "state" : "translated",
             "value" : "Kamera kullanımda"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カメラ使用中"
+          }
         }
       }
     },
@@ -754,6 +1184,12 @@
             "state" : "translated",
             "value" : "Vazgeç"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
         }
       }
     },
@@ -763,6 +1199,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Güncellemeleri Denetle…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデートを確認…"
           }
         }
       }
@@ -776,6 +1218,12 @@
             "state" : "translated",
             "value" : "Göğüs Açma"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "胸を開くストレッチ"
+          }
         }
       }
     },
@@ -787,6 +1235,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ellerinizi arkanızda kenetleyin, kollarınızı düzleştirin ve göğsünüzü açarak hafifçe kaldırın."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背中の後ろで両手を組み、腕を伸ばして少し持ち上げ、胸を開きます。"
           }
         }
       }
@@ -800,6 +1254,12 @@
             "state" : "translated",
             "value" : "Gözlerinizi hafifçe kapatıp gevşeyin. Göz kaslarınız 20 saniye tamamen dinlensin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目をそっと閉じて、20秒間目の筋肉を休ませましょう。"
+          }
         }
       }
     },
@@ -810,6 +1270,12 @@
             "state" : "translated",
             "value" : "Tamamlanan"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
+          }
         }
       }
     },
@@ -819,6 +1285,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tamamlanma"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了回数"
           }
         }
       }
@@ -832,6 +1304,12 @@
             "state" : "translated",
             "value" : "Art arda atlama saptandı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連続スキップを検出しました"
+          }
         }
       }
     },
@@ -841,6 +1319,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Devam"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "続ける"
           }
         }
       }
@@ -852,6 +1336,12 @@
             "state" : "translated",
             "value" : "StandLock yeniden başlatılamadı. Lütfen uygulamayı elle yeniden açın."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLockを再起動できませんでした。手動でアプリを開き直してください。"
+          }
         }
       }
     },
@@ -862,6 +1352,12 @@
             "state" : "translated",
             "value" : "Hareketsizliği alınmış mola say"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "操作していない時間を休憩として記録"
+          }
         }
       }
     },
@@ -871,6 +1367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geri Sayım Başlangıcı"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カウントダウンの開始"
           }
         }
       }
@@ -884,6 +1386,12 @@
             "state" : "translated",
             "value" : "Ctrl+Z duruşunuzu düzeltmez"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl+Zでは姿勢は戻りません"
+          }
         }
       }
     },
@@ -894,6 +1402,12 @@
             "state" : "translated",
             "value" : "Özel"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カスタム"
+          }
         }
       }
     },
@@ -903,6 +1417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Günlük atlama sınırına ulaşıldı"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日のスキップ上限に達しました"
           }
         }
       }
@@ -916,6 +1436,12 @@
             "state" : "translated",
             "value" : "Koyu"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダーク"
+          }
         }
       }
     },
@@ -928,6 +1454,12 @@
             "state" : "translated",
             "value" : "Derin Nefes"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深呼吸"
+          }
         }
       }
     },
@@ -937,6 +1469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Molayı ertele"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩を延期"
           }
         }
       }
@@ -948,6 +1486,12 @@
             "state" : "translated",
             "value" : "Takvim etkinliklerinde molaları ertele"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーの予定中は休憩を延期"
+          }
         }
       }
     },
@@ -958,15 +1502,27 @@
             "state" : "translated",
             "value" : "Takvim etkinliklerinde molaları erteler."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーの予定中は休憩を延期します。"
+          }
         }
       }
     },
-    "Defer breaks during screen sharing or recording" : {
+    "Defer breaks during remote screen sharing" : {
       "localizations" : {
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ekran paylaşımı veya kaydı sırasında molaları ertele"
+            "value" : "Uzaktan ekran paylaşımı sırasında molaları ertele"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リモート画面共有中は休憩を延期"
           }
         }
       }
@@ -978,6 +1534,12 @@
             "state" : "translated",
             "value" : "Kamera etkinken molaları ertele (görüntülü görüşmeler)"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カメラ使用中（ビデオ通話中）は休憩を延期"
+          }
         }
       }
     },
@@ -987,6 +1549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon etkinken molaları ertele (sesli görüşmeler)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マイク使用中（音声通話中）は休憩を延期"
           }
         }
       }
@@ -998,6 +1566,12 @@
             "state" : "translated",
             "value" : "Sil"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除"
+          }
         }
       }
     },
@@ -1007,6 +1581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Programı Sil"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールを削除"
           }
         }
       }
@@ -1018,6 +1598,12 @@
             "state" : "translated",
             "value" : "Algılama"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検出"
+          }
         }
       }
     },
@@ -1028,6 +1614,12 @@
             "state" : "translated",
             "value" : "Disiplin"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "厳しさ"
+          }
         }
       }
     },
@@ -1037,6 +1629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Disiplin Seviyesi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "厳しさのレベル"
           }
         }
       }
@@ -1050,6 +1648,12 @@
             "state" : "translated",
             "value" : "10 yavaş vücut ağırlığı squat yapın. Sırtınızı düz, dizlerinizi parmak uçlarınızın gerisinde tutun."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゆっくり自重スクワットを10回行います。背中を伸ばし、膝がつま先より前に出ないようにします。"
+          }
         }
       }
     },
@@ -1062,6 +1666,12 @@
             "state" : "translated",
             "value" : "Ya hep ya hiç... yani hiç ya da hiç"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "倍かゼロか……いえ、どちらにしてもゼロですね。"
+          }
         }
       }
     },
@@ -1071,6 +1681,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "örn. 3 kısa mola, sonra 1 uzun mola"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例：短い休憩を3回、その後に長い休憩を1回"
           }
         }
       }
@@ -1082,6 +1698,12 @@
             "state" : "translated",
             "value" : "örn. Çalışma Saatleri"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例：勤務時間"
+          }
         }
       }
     },
@@ -1091,6 +1713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Her izin bir özelliği açar. Şimdi ya da sonra Ayarlar'dan izin verebilirsiniz."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各アクセス許可で機能が使えるようになります。今でも後からでも、設定で許可できます。"
           }
         }
       }
@@ -1102,6 +1730,12 @@
             "state" : "translated",
             "value" : "Düzenle"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集"
+          }
         }
       }
     },
@@ -1111,6 +1745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Programı Düzenle"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールを編集"
           }
         }
       }
@@ -1122,6 +1762,12 @@
             "state" : "translated",
             "value" : "Acil Durum"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "緊急"
+          }
         }
       }
     },
@@ -1131,6 +1777,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bu haftaki acil çıkışlar"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週の緊急終了"
           }
         }
       }
@@ -1142,6 +1794,12 @@
             "state" : "translated",
             "value" : "Katı modun molalarda girdiyi tümüyle engellemesini sağlar."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩中の入力を完全にブロックするStrictモードを有効にします。"
+          }
         }
       }
     },
@@ -1151,6 +1809,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Katı modun klavye ve fare girdisini tümüyle engellemesini sağlar."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キーボードとマウスの入力を完全にブロックするStrictモードを有効にします。"
           }
         }
       }
@@ -1162,6 +1826,12 @@
             "state" : "translated",
             "value" : "Katı molayı bitiren çıkış tuş birleşimini etkinleştirir."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strictの休憩を終了する緊急キー操作を有効にします。"
+          }
         }
       }
     },
@@ -1171,6 +1841,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bitiş"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了"
           }
         }
       }
@@ -1184,6 +1860,12 @@
             "state" : "translated",
             "value" : "Artık yazı tura bile iş görürdü"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もうコイントスでもよさそうですね。"
+          }
         }
       }
     },
@@ -1196,6 +1878,12 @@
             "state" : "translated",
             "value" : "İşlemciler bile soğuma molası ister"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CPUにも冷却休憩が必要です。"
+          }
         }
       }
     },
@@ -1205,6 +1893,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "her %@dk"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@分ごと"
           }
         }
       }
@@ -1216,6 +1910,12 @@
             "state" : "translated",
             "value" : "Her gün"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎日"
+          }
         }
       }
     },
@@ -1225,6 +1925,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Her Gün"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎日"
           }
         }
       }
@@ -1238,6 +1944,12 @@
             "state" : "translated",
             "value" : "Egzersiz mi? Ben ekstra patates sandım"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "運動？ポテトのおかわりって言ったのかと思いました。"
+          }
         }
       }
     },
@@ -1249,6 +1961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kollarınızı uzatıp bileklerinizi her yöne 10 kez çevirin."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腕を伸ばし、手首を左右それぞれ10回ずつ回します。"
           }
         }
       }
@@ -1262,6 +1980,12 @@
             "state" : "translated",
             "value" : "Kollarınızı yana açıp giderek büyüyen küçük daireler çizin. 10 ileri, 10 geri."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腕を横に伸ばし、小さな円を描きます。少しずつ円を大きくし、前回しと後ろ回しを10回ずつ行います。"
+          }
         }
       }
     },
@@ -1274,6 +1998,12 @@
             "state" : "translated",
             "value" : "Göz Dinlendirme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目を休める"
+          }
         }
       }
     },
@@ -1283,6 +2013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Açılış öğesi güncellenemedi: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログイン項目を更新できませんでした：%@"
           }
         }
       }
@@ -1296,6 +2032,12 @@
             "state" : "translated",
             "value" : "Şanslı hissediyor musunuz?"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "運試しですか？"
+          }
         }
       }
     },
@@ -1307,6 +2049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Düğme azaldı, hâlâ bulamadınız mı?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ボタンが減っても迷っていますか？"
           }
         }
       }
@@ -1320,6 +2068,12 @@
             "state" : "translated",
             "value" : "Atlamak için doğru düğmeyi bulun"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキップするボタンを探す"
+          }
         }
       }
     },
@@ -1329,6 +2083,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Peki, git →"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もういいです、どうぞ →"
           }
         }
       }
@@ -1342,6 +2102,12 @@
             "state" : "translated",
             "value" : "Peki. Sadece şunu yazın:"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "わかりました。これを入力してください："
+          }
         }
       }
     },
@@ -1353,6 +2119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Peki. Son çevirme."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "わかりました。最後のスピンです。"
           }
         }
       }
@@ -1366,6 +2138,12 @@
             "state" : "translated",
             "value" : "Peki. Sandığımdan da umutsuzsunuz. Atlamanız sizin olsun."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "思った以上に手ごわいですね。スキップしていいですよ。"
+          }
         }
       }
     },
@@ -1377,6 +2155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Parmak Esnetme"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指のストレッチ"
           }
         }
       }
@@ -1390,6 +2174,12 @@
             "state" : "translated",
             "value" : "Sıkı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファーム"
+          }
         }
       }
     },
@@ -1400,6 +2190,12 @@
             "state" : "translated",
             "value" : "Sıkı Günlük Atlama Sınırı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファームの1日あたりのスキップ上限"
+          }
         }
       }
     },
@@ -1409,6 +2205,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "tuşlarını %lld saniye basılı tutun."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了するには%lld秒間"
           }
         }
       }
@@ -1422,6 +2224,12 @@
             "state" : "translated",
             "value" : "Tüm girişi engeller, acil çıkış tuş birleşimi vardır"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "入力を完全にブロックし、緊急キー操作で解除"
+          }
         }
       }
     },
@@ -1434,6 +2242,12 @@
             "state" : "translated",
             "value" : "Tam ekran kaplama ve anında atlama düğmesi"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全画面オーバーレイとすぐ使えるスキップボタン"
+          }
         }
       }
     },
@@ -1443,6 +2257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Genel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一般"
           }
         }
       }
@@ -1456,6 +2276,12 @@
             "state" : "translated",
             "value" : "Esnek"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェントル"
+          }
         }
       }
     },
@@ -1466,6 +2292,12 @@
             "state" : "translated",
             "value" : "Esnek Günlük Atlama Sınırı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェントルの1日あたりのスキップ上限"
+          }
         }
       }
     },
@@ -1475,6 +2307,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esnek mod"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェントルモード"
           }
         }
       }
@@ -1488,6 +2326,12 @@
             "state" : "translated",
             "value" : "Gerçekten etkileyici"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本当に見事ですね。"
+          }
         }
       }
     },
@@ -1500,6 +2344,12 @@
             "state" : "translated",
             "value" : "Gerçekten etkileyici. Peki, git."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本当に見事です。どうぞ。"
+          }
         }
       }
     },
@@ -1509,6 +2359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Başla"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "始める"
           }
         }
       }
@@ -1522,12 +2378,26 @@
             "state" : "translated",
             "value" : "git commit -m \"çimene dokundum\""
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "git commit -m \"外の空気を吸った\""
+          }
         }
       }
     },
     "GitHub" : {
       "comment" : "Label text for a link to the StandLock GitHub repository.",
-      "isCommentAutoGenerated" : true
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub"
+          }
+        }
+      }
     },
     "Go touch some grass" : {
       "comment" : "Break splash",
@@ -1537,6 +2407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Git biraz çimene dokun"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外の空気を吸ってきましょう"
           }
         }
       }
@@ -1548,6 +2424,12 @@
             "state" : "translated",
             "value" : "İzin Ver"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可"
+          }
         }
       }
     },
@@ -1557,6 +2439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kullanımınıza uyan izinleri verin. StandLock hiçbiri olmadan da çalışır."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使い方に合ったアクセスを許可してください。どのアクセス許可もなくてもStandLockは使えます。"
           }
         }
       }
@@ -1570,6 +2458,12 @@
             "state" : "translated",
             "value" : "Arka Bacak Esnetme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もも裏のストレッチ"
+          }
         }
       }
     },
@@ -1581,6 +2475,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kendinizi kapatıp açmayı denediniz mi?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分を一度オフにして、またオンにしてみては？"
           }
         }
       }
@@ -1594,6 +2494,12 @@
             "state" : "translated",
             "value" : "Kalça Çevirme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腰回し"
+          }
         }
       }
     },
@@ -1603,6 +2509,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çıkmak için"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "長押し"
           }
         }
       }
@@ -1616,6 +2528,12 @@
             "state" : "translated",
             "value" : "Bunu zaten biliyordum. Sıradaki."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "それは知っていました。次です。"
+          }
         }
       }
     },
@@ -1627,6 +2545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kısa bir yürüyüş yerine erken sırt ağrısını seçiyorum"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "少し歩くより、早めに腰を痛めるほうを選びます"
           }
         }
       }
@@ -1640,6 +2564,12 @@
             "state" : "translated",
             "value" : "Bu molayı atlamayı seçiyorum"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この休憩をスキップします"
+          }
         }
       }
     },
@@ -1651,6 +2581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oturmayı rekabetçi bir spor sayıyorum"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "座ることは競技スポーツだと思っています"
           }
         }
       }
@@ -1664,6 +2600,12 @@
             "state" : "translated",
             "value" : "Zaten oturmayı tercih ederim"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どうせ座っているほうが好きです"
+          }
         }
       }
     },
@@ -1676,6 +2618,12 @@
             "state" : "translated",
             "value" : "Bacak gününü atladım, diğer günleri de"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脚のトレーニングも、それ以外の日もサボりました"
+          }
         }
       }
     },
@@ -1685,6 +2633,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bundan sonra zamanın sonuna dek her molayı vereceğime yemin ederim"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今から永遠に、すべての休憩を取ることをここに誓います"
           }
         }
       }
@@ -1698,6 +2652,12 @@
             "state" : "translated",
             "value" : "Sağlık önerilerini nazik tavsiyeler sayıyorum"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康の助言は軽い提案くらいに受け止めています"
+          }
         }
       }
     },
@@ -1709,6 +2669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bacaklarıma dekoratif mobilya gibi davranıyorum"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脚を飾りの家具のように扱っています"
           }
         }
       }
@@ -1722,6 +2688,12 @@
             "state" : "translated",
             "value" : "Mola vermektense kendimi rezil etmeyi yeğlerim"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩するくらいなら、恥をかくほうがましです"
+          }
         }
       }
     },
@@ -1731,6 +2703,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sonra yapılandıracağım"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後で設定する"
           }
         }
       }
@@ -1744,6 +2722,12 @@
             "state" : "translated",
             "value" : "Ayağa kalkmaya alerjim var"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ち上がるとアレルギー反応が出ます"
+          }
         }
       }
     },
@@ -1755,6 +2739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bu fotoğraftayım ve hoşuma gitmiyor"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この絵に自分がいるのはわかりますが、気に入りません"
           }
         }
       }
@@ -1768,6 +2758,12 @@
             "state" : "translated",
             "value" : "Lafım kalmadı. Atlama sizindir, tam bir efsanesiniz."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう悪口が思いつきません。スキップを許可します。さすがです。"
+          }
         }
       }
     },
@@ -1780,6 +2776,12 @@
             "state" : "translated",
             "value" : "Otuz saniye ayakta duramayacak kadar tembelim"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30秒立つのも面倒です"
+          }
         }
       }
     },
@@ -1789,6 +2791,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Boşta Kalmayı Mola Say"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無操作時間を休憩として扱う"
           }
         }
       }
@@ -1802,6 +2810,12 @@
             "state" : "translated",
             "value" : "Yakınında merdiven varsa bir kat inip çıkın. Kısa bir hareket enerjinizi yükseltir."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近くに階段があれば、1階分だけ上り下りしましょう。短い運動で活力が戻ります。"
+          }
         }
       }
     },
@@ -1811,6 +2825,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yoksay"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無視"
           }
         }
       }
@@ -1824,6 +2844,12 @@
             "state" : "translated",
             "value" : "Etkileyici. Bir tane bile yok."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "見事です。ひとつもありません。"
+          }
         }
       }
     },
@@ -1833,6 +2859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Girdi İzleme"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "入力監視"
           }
         }
       }
@@ -1846,6 +2878,12 @@
             "state" : "translated",
             "value" : "Benim omurgamda çalışıyor"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背骨には効きます"
+          }
         }
       }
     },
@@ -1857,6 +2895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Artık tam anlamıyla 50/50"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今や文字どおり五分五分です"
           }
         }
       }
@@ -1870,6 +2914,12 @@
             "state" : "translated",
             "value" : "Jackpot. Of."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大当たり。ああ、残念。"
+          }
         }
       }
     },
@@ -1880,6 +2930,12 @@
             "state" : "translated",
             "value" : "Etiket (isteğe bağlı, örn. Oturma)"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ラベル（任意、例：座っている）"
+          }
         }
       }
     },
@@ -1889,6 +2945,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dil"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語"
           }
         }
       }
@@ -1902,6 +2964,12 @@
             "state" : "translated",
             "value" : "Son şans. Baskı yok."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後のチャンスです。気楽にどうぞ。"
+          }
         }
       }
     },
@@ -1914,6 +2982,12 @@
             "state" : "translated",
             "value" : "Sonuncu. İyi değerlendirin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これが最後です。悔いのないように。"
+          }
         }
       }
     },
@@ -1923,6 +2997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Daha Sonra"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後で"
           }
         }
       }
@@ -1934,6 +3014,12 @@
             "state" : "translated",
             "value" : "Açılışta Başlat"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログイン時に起動"
+          }
         }
       }
     },
@@ -1943,6 +3029,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Az"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "少ない"
           }
         }
       }
@@ -1956,6 +3048,12 @@
             "state" : "translated",
             "value" : "LGTM. Şimdi ayağa kalkın."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "よさそうです。さあ、立ち上がりましょう。"
+          }
         }
       }
     },
@@ -1968,12 +3066,24 @@
             "state" : "translated",
             "value" : "Açık"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライト"
+          }
         }
       }
     },
     "LOCK" : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LOCK"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "LOCK"
@@ -1988,6 +3098,12 @@
             "state" : "translated",
             "value" : "Uzun mola: %lld dk"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "長い休憩：%lld分"
+          }
         }
       }
     },
@@ -2000,6 +3116,12 @@
             "state" : "translated",
             "value" : "20 saniye boyunca 6 metre uzaktaki bir şeye bakın. Bu, dijital göz yorgunluğunu belirgin biçimde azaltır."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "約6メートル先を20秒間見つめましょう。画面による目の疲れを和らげます。"
+          }
         }
       }
     },
@@ -2009,6 +3131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "İleri bakış: %lld dk"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "先読み：%lld分"
           }
         }
       }
@@ -2021,6 +3149,12 @@
             "state" : "translated",
             "value" : "dk"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分"
+          }
         }
       }
     },
@@ -2031,6 +3165,12 @@
             "state" : "translated",
             "value" : "Molaları zamanla atlaması zorlaştır"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時間とともに休憩をスキップしにくくする"
+          }
         }
       }
     },
@@ -2040,6 +3180,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atlanan her molayı kapatması daha zor hale getirir"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキップするたびに休憩を終了しにくくします"
           }
         }
       }
@@ -2053,6 +3199,12 @@
             "state" : "translated",
             "value" : "Belki ayağa kalkmak bundan kolaydır"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ち上がるほうが簡単かもしれません"
+          }
         }
       }
     },
@@ -2062,6 +3214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Medya ve Boşta"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メディアと無操作時間"
           }
         }
       }
@@ -2073,6 +3231,12 @@
             "state" : "translated",
             "value" : "Menü Çubuğu Görünümü"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メニューバー表示"
+          }
         }
       }
     },
@@ -2082,6 +3246,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon Algılama"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マイク検出"
           }
         }
       }
@@ -2095,6 +3265,12 @@
             "state" : "translated",
             "value" : "Mikrofon kullanımda"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マイク使用中"
+          }
         }
       }
     },
@@ -2105,6 +3281,12 @@
             "state" : "translated",
             "value" : "dk"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分"
+          }
         }
       }
     },
@@ -2114,6 +3296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pazartesi – Cuma"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月曜日～金曜日"
           }
         }
       }
@@ -2127,6 +3315,12 @@
             "state" : "translated",
             "value" : "Ay"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
         }
       }
     },
@@ -2136,6 +3330,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çok"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多い"
           }
         }
       }
@@ -2149,6 +3349,12 @@
             "state" : "translated",
             "value" : "Bunların çoğu kırmızı. Söylemiş olayım."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ほとんど赤ですね。念のため。"
+          }
         }
       }
     },
@@ -2160,6 +3366,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sandalyemle ciddi bir ilişkimiz var"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "椅子とは深い仲です"
           }
         }
       }
@@ -2173,6 +3385,12 @@
             "state" : "translated",
             "value" : "Doktorum şu an çok hayal kırıklığına uğrardı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今ごろ主治医はがっかりしているでしょう"
+          }
         }
       }
     },
@@ -2184,6 +3402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bacaklarım dekoratif"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "私の脚は飾りです"
           }
         }
       }
@@ -2197,6 +3421,12 @@
             "state" : "translated",
             "value" : "Bacaklarım ne işe yaradığını unuttu"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脚は自分の役目を忘れました"
+          }
         }
       }
     },
@@ -2208,6 +3438,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Duruşum bir yardım çığlığı"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この姿勢は助けを求めています"
           }
         }
       }
@@ -2221,6 +3457,12 @@
             "state" : "translated",
             "value" : "Omurgam şikâyet etti ama ben kulak asmadım"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背骨から苦情が来ましたが無視しました"
+          }
         }
       }
     },
@@ -2230,6 +3472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ad"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前"
           }
         }
       }
@@ -2243,6 +3491,12 @@
             "state" : "translated",
             "value" : "Boyun Çevirme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首回し"
+          }
         }
       }
     },
@@ -2255,6 +3509,12 @@
             "state" : "translated",
             "value" : "Never gonna give you up"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "絶対に裏切らない"
+          }
         }
       }
     },
@@ -2264,6 +3524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yeni Program"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいスケジュール"
           }
         }
       }
@@ -2275,6 +3541,12 @@
             "state" : "translated",
             "value" : "Sonraki mola %@"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次の休憩：%@"
+          }
         }
       }
     },
@@ -2284,6 +3556,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SIRADAKİ: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次：%@"
           }
         }
       }
@@ -2295,6 +3573,12 @@
             "state" : "translated",
             "value" : "Etkin program yok"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有効なスケジュールがありません"
+          }
         }
       }
     },
@@ -2304,6 +3588,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Program Yok"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールがありません"
           }
         }
       }
@@ -2315,6 +3605,12 @@
             "state" : "translated",
             "value" : "Takvim bulunamadı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーが見つかりません"
+          }
         }
       }
     },
@@ -2324,6 +3620,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yapılandırılmış program yok"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールが設定されていません"
           }
         }
       }
@@ -2337,6 +3639,12 @@
             "state" : "translated",
             "value" : "Daha bitmedi."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ終わっていません。"
+          }
         }
       }
     },
@@ -2348,6 +3656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tamam tamam, kazandınız. Ya da kaybettiniz. Bakış açısına göre değişir."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はいはい、あなたの勝ちです。負けとも言えますが。"
           }
         }
       }
@@ -2361,6 +3675,12 @@
             "state" : "translated",
             "value" : "Molalar öylece atlanmaz"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩はそう簡単にスキップできません"
+          }
         }
       }
     },
@@ -2372,6 +3692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bunlardan biri gerçekten çalışıyor..."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この中のどれかは本当に効きます……"
           }
         }
       }
@@ -2385,6 +3711,12 @@
             "state" : "translated",
             "value" : "Tek makara. Tek düğme. Bahane yok."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リールは1つ、ボタンも1つ。言い訳はできません。"
+          }
         }
       }
     },
@@ -2394,6 +3726,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yalnızca işaretli takvimler molaları erteler"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チェックしたカレンダーの予定中だけ休憩を延期"
           }
         }
       }
@@ -2405,6 +3743,12 @@
             "state" : "translated",
             "value" : "Ayarları Aç"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定を開く"
+          }
         }
       }
     },
@@ -2415,6 +3759,12 @@
             "state" : "translated",
             "value" : "Oturum açtığınızda StandLock'u başlat"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログイン時にStandLockを開く"
+          }
         }
       }
     },
@@ -2424,6 +3774,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sistem Ayarları'nı Aç"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "システム設定を開く"
           }
         }
       }
@@ -2437,6 +3793,12 @@
             "state" : "translated",
             "value" : "Yukarı Uzanma"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腕を上げるストレッチ"
+          }
         }
       }
     },
@@ -2449,6 +3811,12 @@
             "state" : "translated",
             "value" : "Gecikmeli atlama ve çıkış için cümle yazma"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキップに待ち時間があり、フレーズ入力で解除するオーバーレイ"
+          }
         }
       }
     },
@@ -2458,6 +3826,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mola başlayınca ses çalmayı duraklat"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩開始時に音声再生を一時停止"
           }
         }
       }
@@ -2469,6 +3843,12 @@
             "state" : "translated",
             "value" : "Medyayı Duraklat"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メディアを一時停止"
+          }
         }
       }
     },
@@ -2478,6 +3858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Programı Duraklat"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールを一時停止"
           }
         }
       }
@@ -2489,6 +3875,12 @@
             "state" : "translated",
             "value" : "Duraklatıldı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一時停止中"
+          }
         }
       }
     },
@@ -2498,6 +3890,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ kadar duraklatıldı"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@まで一時停止"
           }
         }
       }
@@ -2509,6 +3907,12 @@
             "state" : "translated",
             "value" : "Dönem"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "期間"
+          }
         }
       }
     },
@@ -2519,6 +3923,12 @@
             "state" : "translated",
             "value" : "İzin Gerekli"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクセス許可が必要です"
+          }
         }
       }
     },
@@ -2528,6 +3938,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "İzinler"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクセス許可"
           }
         }
       }
@@ -2541,6 +3957,12 @@
             "state" : "translated",
             "value" : "Bir ayağınızı alçak bir yüzeye koyun, bacağınızı düz tutup öne eğilin. Her iki tarafta 15 saniye bekleyin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "片足を低い台に乗せ、脚を伸ばしたまま前に体を傾けます。左右それぞれ15秒保ちます。"
+          }
         }
       }
     },
@@ -2552,6 +3974,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ellerinizi kalçanıza koyup geniş daireler çizin. 10 saat yönünde, 10 tersine."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腰に手を当て、大きく円を描くように回します。時計回りと反時計回りを10回ずつ行います。"
           }
         }
       }
@@ -2565,6 +3993,12 @@
             "state" : "translated",
             "value" : "Duruş Kontrolü"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "姿勢を確認"
+          }
         }
       }
     },
@@ -2574,6 +4008,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kademeli Zorlama"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "段階的な制限"
           }
         }
       }
@@ -2587,6 +4027,12 @@
             "state" : "translated",
             "value" : "Ön Bacak Esnetme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太もも前側のストレッチ"
+          }
         }
       }
     },
@@ -2597,6 +4043,12 @@
             "state" : "translated",
             "value" : "Hızlı Kurulum"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "かんたん設定"
+          }
         }
       }
     },
@@ -2606,6 +4058,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "StandLock'tan Çık"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLockを終了"
           }
         }
       }
@@ -2619,6 +4077,12 @@
             "state" : "translated",
             "value" : "İki kolunuzu başınızın üstüne kaldırın, parmaklarınızı kenetleyip yukarı uzanın. 15 saniye bekleyin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "両腕を頭上に上げ、指を組んで上に伸ばします。15秒保ちます。"
+          }
         }
       }
     },
@@ -2630,6 +4094,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bir kolunuzu yukarı kaldırıp karşı tarafa eğilin. 10 saniye bekleyin, sonra taraf değiştirin."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "片腕を頭上に上げ、反対側へ体を傾けます。10秒保ったら反対側も行います。"
           }
         }
       }
@@ -2643,6 +4113,12 @@
             "state" : "translated",
             "value" : "Omuzlarınızı kulaklarınıza doğru kaldırın, 3 saniye tutun, sonra bırakın. 10 kez tekrarlayın."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肩を耳に近づけるように上げ、3秒保ってから力を抜きます。10回繰り返します。"
+          }
         }
       }
     },
@@ -2652,6 +4128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esnek'e düşür"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェントルに軽減"
           }
         }
       }
@@ -2665,6 +4147,12 @@
             "state" : "translated",
             "value" : "Makaralar biraz yavaşladı. Rica ederim."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リールの動きが少し遅くなりました。どういたしまして。"
+          }
         }
       }
     },
@@ -2674,6 +4162,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tekrar Döngüsü"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "繰り返しのサイクル"
           }
         }
       }
@@ -2685,6 +4179,12 @@
             "state" : "translated",
             "value" : "Yeniden Başlat"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再起動"
+          }
         }
       }
     },
@@ -2694,6 +4194,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yeniden Başlatma Başarısız"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再起動に失敗しました"
           }
         }
       }
@@ -2705,6 +4211,12 @@
             "state" : "translated",
             "value" : "Şimdi Yeniden Başlat"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今すぐ再起動"
+          }
         }
       }
     },
@@ -2714,6 +4226,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Programı Sürdür"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールを再開"
           }
         }
       }
@@ -2727,6 +4245,12 @@
             "state" : "translated",
             "value" : "Omuzlarınızı 10 kez öne, sonra 10 kez arkaya çevirin. Hareketleri yavaş ve kontrollü tutun."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肩を前に10回、後ろに10回回します。ゆっくりと丁寧に動かしましょう。"
+          }
         }
       }
     },
@@ -2736,6 +4260,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kaydet"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
           }
         }
       }
@@ -2749,6 +4279,12 @@
             "state" : "translated",
             "value" : "Bunu görmüştüm"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "そうなると思っていました"
+          }
         }
       }
     },
@@ -2759,6 +4295,12 @@
             "state" : "translated",
             "value" : "Programlar"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュール"
+          }
         }
       }
     },
@@ -2768,6 +4310,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ekran Paylaşımı"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画面共有"
           }
         }
       }
@@ -2781,6 +4329,12 @@
             "state" : "translated",
             "value" : "Ekran paylaşımı sürüyor"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画面共有中"
+          }
         }
       }
     },
@@ -2793,6 +4347,12 @@
             "state" : "translated",
             "value" : "Ekran süresi: saatler. Mola süresi: reddedildi."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画面を見る時間は何時間。休憩はお断り。"
+          }
         }
       }
     },
@@ -2802,6 +4362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ayarlar..."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定…"
           }
         }
       }
@@ -2813,6 +4379,12 @@
             "state" : "translated",
             "value" : "Kısa mola"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "短い休憩"
+          }
         }
       }
     },
@@ -2822,6 +4394,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kısa mola sayısı: %lld"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "短い休憩：%lld回"
           }
         }
       }
@@ -2835,6 +4413,12 @@
             "state" : "translated",
             "value" : "Omuz Çevirme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肩回し"
+          }
         }
       }
     },
@@ -2847,6 +4431,12 @@
             "state" : "translated",
             "value" : "Omuz Silkme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肩すくめ"
+          }
         }
       }
     },
@@ -2857,6 +4447,12 @@
             "state" : "translated",
             "value" : "Tam Çalışma Sayacını Göster"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "作業時間を常に表示"
+          }
         }
       }
     },
@@ -2866,6 +4462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Molaya son dakikalarda sayacı göster"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩までの残り数分にタイマーを表示"
           }
         }
       }
@@ -2879,6 +4481,12 @@
             "state" : "translated",
             "value" : "Yana Esnetme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "体側のストレッチ"
+          }
         }
       }
     },
@@ -2891,6 +4499,12 @@
             "state" : "translated",
             "value" : "Oturun ya da ayakta durun, bir elinizi karşı dizinize koyup gövdenizi nazikçe çevirin. Her iki tarafta 10 saniye bekleyin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "座るか立った状態で、片手を反対側の膝に置き、上半身をゆっくりひねります。左右それぞれ10秒保ちます。"
+          }
         }
       }
     },
@@ -2900,6 +4514,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atla"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキップ"
           }
         }
       }
@@ -2911,6 +4531,12 @@
             "state" : "translated",
             "value" : "Atlama %lld sn sonra"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あと%lld秒でスキップ可能"
+          }
         }
       }
     },
@@ -2920,6 +4546,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Molayı atla"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩をスキップ"
           }
         }
       }
@@ -2931,6 +4563,12 @@
             "state" : "translated",
             "value" : "Sonraki Molayı Atla"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次の休憩をスキップ"
+          }
         }
       }
     },
@@ -2940,6 +4578,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bu molayı atla →"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この休憩をスキップ →"
           }
         }
       }
@@ -2951,6 +4595,12 @@
             "state" : "translated",
             "value" : "Bu mola atlansın mı?"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この休憩をスキップしますか？"
+          }
         }
       }
     },
@@ -2960,6 +4610,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atlanan"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキップ済み"
           }
         }
       }
@@ -2973,6 +4629,12 @@
             "state" : "translated",
             "value" : "Başınızı yavaşça daire çizerek çevirin: 5 kez saat yönünde, 5 kez tersine."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頭をゆっくり円を描くように、時計回りと反時計回りに5回ずつ回します。"
+          }
         }
       }
     },
@@ -2984,6 +4646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demek ayağa kalkmaktansa kumar oynamayı yeğliyorsunuz"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ち上がるより運に賭けるのですね"
           }
         }
       }
@@ -2997,6 +4665,12 @@
             "state" : "translated",
             "value" : "Çoook yakındı. Evrenin acımasız bir mizah anlayışı var."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あと少しでした。宇宙は意地悪ですね。"
+          }
         }
       }
     },
@@ -3007,6 +4681,12 @@
             "state" : "translated",
             "value" : "Belirli takvimler"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択したカレンダー"
+          }
         }
       }
     },
@@ -3016,6 +4696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çevir →"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回す →"
           }
         }
       }
@@ -3029,6 +4715,12 @@
             "state" : "translated",
             "value" : "Omurga Dönüşü"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背骨をひねるストレッチ"
+          }
         }
       }
     },
@@ -3041,12 +4733,24 @@
             "state" : "translated",
             "value" : "Parmaklarınızı iyice açın, 5 saniye tutun, sonra yumruk yapın. 8 kez tekrarlayın."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指を大きく開いて5秒保ち、握りこぶしを作ります。8回繰り返します。"
+          }
         }
       }
     },
     "STAND" : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "STAND"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "STAND"
@@ -3063,6 +4767,12 @@
             "state" : "translated",
             "value" : "Başınız, omuzlarınız ve kalçanız değecek şekilde duvara yaslanın. Bu duruşu 15 saniye koruyun."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頭、肩、腰を壁につけて立ちます。その姿勢を15秒保ちます。"
+          }
         }
       }
     },
@@ -3074,6 +4784,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ayakta yavaşça parmak ucunuza yükselin, sonra inin. 15 kez tekrarlayın."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ったままゆっくりつま先立ちになり、元に戻ります。15回繰り返します。"
           }
         }
       }
@@ -3087,6 +4803,12 @@
             "state" : "translated",
             "value" : "Tek ayak üstünde durun, arkadan diğer ayağınızı tutup topuğunuzu kalçanıza doğru çekin. Her iki tarafta 15 saniye bekleyin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "片脚で立ち、反対側の足を後ろで持って、かかとをお尻に近づけます。左右それぞれ15秒保ちます。"
+          }
         }
       }
     },
@@ -3098,6 +4820,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ayağa kalkıp yavaşça öne eğilerek parmak uçlarınıza dokunun. 10 saniye bekleyin, sonra yavaşça doğrulun."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ち上がってゆっくり前屈し、つま先に触れます。10秒保ってから、ゆっくり起き上がります。"
           }
         }
       }
@@ -3111,6 +4839,12 @@
             "state" : "translated",
             "value" : "En büyük korkum ayakta durmak"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ち上がるのが何より怖いです"
+          }
         }
       }
     },
@@ -3122,6 +4856,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ayakta Squat"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ちスクワット"
           }
         }
       }
@@ -3135,12 +4875,24 @@
             "state" : "translated",
             "value" : "Ayakta durmak: şaşırtıcı biçimde ölümcül değil"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立つこと：意外と命に関わりません"
+          }
         }
       }
     },
     "StandLock" : {
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLock"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "StandLock"
@@ -3155,6 +4907,12 @@
             "state" : "translated",
             "value" : "Bu izni uygulamak için StandLock'un yeniden başlatılması gerekiyor."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このアクセス許可を反映するにはStandLockの再起動が必要です。"
+          }
         }
       }
     },
@@ -3164,6 +4922,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Başlangıç"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始"
           }
         }
       }
@@ -3175,6 +4939,12 @@
             "state" : "translated",
             "value" : "Molayı başlat"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩を開始"
+          }
         }
       }
     },
@@ -3185,6 +4955,12 @@
             "state" : "translated",
             "value" : "Önerilen bir programla başlayın ya da kendinizinkini sonra yapılandırın."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おすすめのスケジュールで始めるか、後で自分用に設定できます。"
+          }
         }
       }
     },
@@ -3194,6 +4970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "İstatistikler"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "統計"
           }
         }
       }
@@ -3207,6 +4989,12 @@
             "state" : "translated",
             "value" : "Hâlâ şanslı hissediyor musunuz?"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ運試しをしますか？"
+          }
         }
       }
     },
@@ -3219,6 +5007,12 @@
             "state" : "translated",
             "value" : "Hâlâ devam mı? Vay."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ続けますか？すごいですね。"
+          }
         }
       }
     },
@@ -3228,6 +5022,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Durdur"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止"
           }
         }
       }
@@ -3241,6 +5041,12 @@
             "state" : "translated",
             "value" : "Kazanmak için her makarayı Atla'da durdurun"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてのリールを「スキップ」に合わせると成功"
+          }
         }
       }
     },
@@ -3250,6 +5056,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seri"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連続記録"
           }
         }
       }
@@ -3263,6 +5075,12 @@
             "state" : "translated",
             "value" : "Şimdi esneyin, sonra hata ayıklarsınız"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今ストレッチして、デバッグは後で"
+          }
         }
       }
     },
@@ -3275,6 +5093,12 @@
             "state" : "translated",
             "value" : "Katı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ストリクト"
+          }
         }
       }
     },
@@ -3285,6 +5109,12 @@
             "state" : "translated",
             "value" : "Katı'da atlama sınırı yoktur; molayı yalnızca acil çıkış tuş birleşimi erken bitirir."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ストリクトにはスキップ上限がありません。休憩を早く終えられるのは緊急キー操作だけです。"
+          }
         }
       }
     },
@@ -3294,6 +5124,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Katı devre dışı, Sıkı olarak çalışıyor"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ストリクトは無効です。ファーム相当で動作中"
           }
         }
       }
@@ -3307,6 +5143,12 @@
             "state" : "translated",
             "value" : "Katı mod, Erişilebilirlik ve Girdi İzleme izinlerini gerektirir."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ストリクトモードにはアクセシビリティと入力監視の許可が必要です。"
+          }
         }
       }
     },
@@ -3318,6 +5160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Katı mod, molalarda girdiyi engellemek için Erişilebilirlik izni gerektirir."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩中に入力をブロックするには、ストリクトモードでアクセシビリティの許可が必要です。"
           }
         }
       }
@@ -3331,6 +5179,12 @@
             "state" : "translated",
             "value" : "Katı mod, çıkış tuş birleşimi için Girdi İzleme izni gerektirir."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "緊急キー操作を使うには、ストリクトモードで入力監視の許可が必要です。"
+          }
         }
       }
     },
@@ -3339,6 +5193,12 @@
       "extractionState" : "manual",
       "localizations" : {
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sudo stand up"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "sudo stand up"
@@ -3353,6 +5213,12 @@
             "state" : "translated",
             "value" : "Sistem"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "システム"
+          }
         }
       }
     },
@@ -3363,6 +5229,12 @@
             "state" : "translated",
             "value" : "Sistem, Mac'inizin görünümünü izler"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macの外観設定に合わせる"
+          }
         }
       }
     },
@@ -3372,6 +5244,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sistem, Mac'inizin dilini izler"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macのシステム言語に合わせる"
           }
         }
       }
@@ -3385,6 +5263,12 @@
             "state" : "translated",
             "value" : "5 derin nefes alın: 4 saniye içinize çekin, 4 saniye tutun, 4 saniye verin."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4秒吸って息を止め、4秒かけて吐きます。5回繰り返します。"
+          }
         }
       }
     },
@@ -3397,6 +5281,12 @@
             "state" : "translated",
             "value" : "Odanızda ya da ofisinizde kısa bir yürüyüş yapın. Bacaklarınızı hareket ettirin, kanınız dolaşsın."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "部屋やオフィスを少し歩きましょう。脚を動かして血行を促します。"
+          }
         }
       }
     },
@@ -3406,6 +5296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çalışırken sağlıklı ayakta mola verin"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "作業中に健康的な立ち休憩を取りましょう"
           }
         }
       }
@@ -3419,6 +5315,12 @@
             "state" : "translated",
             "value" : "Merdiveni Kullan"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "階段を使う"
+          }
         }
       }
     },
@@ -3430,6 +5332,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bilmediğim bir şey söyleyin."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "私の知らないことを教えてください。"
           }
         }
       }
@@ -3443,6 +5351,12 @@
             "state" : "translated",
             "value" : "Sandalye bir yere kaçmıyor"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "椅子は逃げません"
+          }
         }
       }
     },
@@ -3454,6 +5368,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kasa hep kazanır"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "結局、家（胴元）が勝つものです"
           }
         }
       }
@@ -3467,6 +5387,12 @@
             "state" : "translated",
             "value" : "Her şey yolunda."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これで大丈夫です。"
+          }
         }
       }
     },
@@ -3479,6 +5405,12 @@
             "state" : "translated",
             "value" : "Bu iş utanç verici olmaya başladı"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "だんだん恥ずかしくなってきました"
+          }
         }
       }
     },
@@ -3488,6 +5420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bu Hafta"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週"
           }
         }
       }
@@ -3499,6 +5437,12 @@
             "state" : "translated",
             "value" : "Zaman Aralıkları"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時間帯"
+          }
         }
       }
     },
@@ -3509,6 +5453,12 @@
             "state" : "translated",
             "value" : "Zamanlama"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイミング"
+          }
         }
       }
     },
@@ -3518,6 +5468,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "–"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "～"
           }
         }
       }
@@ -3531,6 +5487,12 @@
             "state" : "translated",
             "value" : "Bugün"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日"
+          }
         }
       }
     },
@@ -3542,6 +5504,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Öne Eğilme"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前屈ストレッチ"
           }
         }
       }
@@ -3555,6 +5523,12 @@
             "state" : "translated",
             "value" : "İki denemenizi aldı ama tamam."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2回かかりましたが、まあいいでしょう。"
+          }
         }
       }
     },
@@ -3565,12 +5539,26 @@
             "state" : "translated",
             "value" : "Tekrar dene →"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう一度 →"
+          }
         }
       }
     },
     "Twitter" : {
       "comment" : "Label for the Twitter link in the About screen.",
-      "isCommentAutoGenerated" : true
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twitter"
+          }
+        }
+      }
     },
     "Two buttons. No excuses." : {
       "comment" : "Break challenge copy",
@@ -3580,6 +5568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "İki düğme. Bahane yok."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ボタンは2つ。言い訳はできません。"
           }
         }
       }
@@ -3593,6 +5587,12 @@
             "state" : "translated",
             "value" : "İki bitti, sıfır utanç. Bir tane daha."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2つ終わって、恥ずかしさはゼロ。あと1つです。"
+          }
         }
       }
     },
@@ -3604,6 +5604,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "İki dakika. Hayatta kalırsınız."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2分です。きっと大丈夫。"
           }
         }
       }
@@ -3617,6 +5623,12 @@
             "state" : "translated",
             "value" : "Üçte iki fena değil... aslında burada fena."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3回中2回です……ここではかなりひどいですね。"
+          }
         }
       }
     },
@@ -3629,6 +5641,12 @@
             "state" : "translated",
             "value" : "Of. Peki, git."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう、わかりました。どうぞ。"
+          }
         }
       }
     },
@@ -3638,6 +5656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Güncelle"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデート"
           }
         }
       }
@@ -3649,6 +5673,12 @@
             "state" : "translated",
             "value" : "Güncelleme mevcut"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデートがあります"
+          }
         }
       }
     },
@@ -3658,6 +5688,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Varsayılan Programı Kullan"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "既定のスケジュールを使う"
           }
         }
       }
@@ -3669,6 +5705,12 @@
             "state" : "translated",
             "value" : "v%@ mevcut"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "v%@を利用できます"
+          }
         }
       }
     },
@@ -3679,6 +5721,12 @@
             "state" : "translated",
             "value" : "Sürüm %@ (Yapı %@)"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バージョン%@（ビルド%@）"
+          }
         }
       }
     },
@@ -3688,6 +5736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Video ve Ses"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビデオとオーディオ"
           }
         }
       }
@@ -3701,6 +5755,12 @@
             "state" : "translated",
             "value" : "Odada Yürü"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "部屋を歩く"
+          }
         }
       }
     },
@@ -3712,6 +5772,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mutfağa gidip bir bardak su için. Su içmek odaklanmayı artırır."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キッチンまで歩いて水をコップ1杯飲みましょう。水分補給は集中力を保つのに役立ちます。"
           }
         }
       }
@@ -3725,6 +5791,12 @@
             "state" : "translated",
             "value" : "Pencereye gidip 20 saniye uzaktaki bir şeye bakın. Bu, göz kaslarınızı gevşetir."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "窓辺まで歩き、遠くを20秒間見つめましょう。目の筋肉を休ませるのに役立ちます。"
+          }
         }
       }
     },
@@ -3737,6 +5809,12 @@
             "state" : "translated",
             "value" : "Su Molası"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "水分補給休憩"
+          }
         }
       }
     },
@@ -3747,6 +5825,12 @@
             "state" : "translated",
             "value" : "Ayağa kalkmanın daha kolay olacağını ikimiz de biliyoruz."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ち上がるほうが簡単だったのは、お互いわかっています。"
+          }
         }
       }
     },
@@ -3756,6 +5840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Web Sitesi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウェブサイト"
           }
         }
       }
@@ -3769,6 +5859,12 @@
             "state" : "translated",
             "value" : "Hafta"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週"
+          }
         }
       }
     },
@@ -3779,6 +5875,12 @@
             "state" : "translated",
             "value" : "Hafta İçi"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平日"
+          }
         }
       }
     },
@@ -3788,6 +5890,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hafta Sonu"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週末"
           }
         }
       }
@@ -3801,6 +5909,12 @@
             "state" : "translated",
             "value" : "Pencereye Bak"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "窓の外を眺める"
+          }
         }
       }
     },
@@ -3812,6 +5926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vay. Üçü de. Boşa gitti."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すごい。3回とも無駄でした。"
           }
         }
       }
@@ -3825,6 +5945,12 @@
             "state" : "translated",
             "value" : "Bilek Çevirme"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手首回し"
+          }
         }
       }
     },
@@ -3835,6 +5961,12 @@
             "state" : "translated",
             "value" : "Devam etmek için %@ yazın"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "続けるには%@と入力してください"
+          }
         }
       }
     },
@@ -3844,6 +5976,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kapatmak için %@ yazın"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了するには%@と入力してください"
           }
         }
       }
@@ -3857,6 +5995,12 @@
             "state" : "translated",
             "value" : "Yine mi yanlış? Şaşırtıcı."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "また間違いですか？驚きですね。"
+          }
         }
       }
     },
@@ -3868,6 +6012,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yıl"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年"
           }
         }
       }
@@ -3881,6 +6031,12 @@
             "state" : "translated",
             "value" : "Bunu gerçekten yazdınız mı? Tembelliğe etkileyici bir bağlılık."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本当にそれを入力したのですか？面倒くさがりも徹底していますね。"
+          }
         }
       }
     },
@@ -3892,6 +6048,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atlamak mı istiyorsunuz? Hak edin."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキップしたいのですか？それなりの手間をかけてください。"
           }
         }
       }
@@ -3905,6 +6067,12 @@
             "state" : "translated",
             "value" : "Başarısız olmaya gerçekten kararlısınız"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "失敗にずいぶん熱心ですね"
+          }
         }
       }
     },
@@ -3916,6 +6084,276 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hâlâ burada mısınız?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだここにいるのですか？"
+          }
+        }
+      }
+    },
+    "StandLock: ON" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLock：オン"
+          }
+        }
+      }
+    },
+    "StandLock: OFF" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLock：オフ"
+          }
+        }
+      }
+    },
+    "Off" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オフ"
+          }
+        }
+      }
+    },
+    "Break management is off" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩管理はオフです"
+          }
+        }
+      }
+    },
+    "Waiting for an allowed Wi-Fi network" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可したWi-Fiネットワークを待機中"
+          }
+        }
+      }
+    },
+    "Turns all break management features on or off" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLockの休憩管理機能全体をオンまたはオフにします"
+          }
+        }
+      }
+    },
+    "Home Wi-Fi only" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自宅のWi-Fiのみ"
+          }
+        }
+      }
+    },
+    "Run break schedules only on selected Wi-Fi networks" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択したWi-Fiネットワークに接続中のみ休憩スケジュールを動作"
+          }
+        }
+      }
+    },
+    "macOS requires Location Services permission to read the current Wi-Fi name (SSID). StandLock reads only the current SSID; it never reads or stores coordinates." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在接続中のWi-Fi名（SSID）を読み取るにはmacOSの位置情報サービスの許可が必要です。StandLockは現在のSSIDだけを読み取り、座標を取得・利用・保存しません。"
+          }
+        }
+      }
+    },
+    "Wi-Fi checking is stopped while StandLock is off" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLockがオフの間、Wi-Fiの確認を停止しています"
+          }
+        }
+      }
+    },
+    "Location access is needed to read the current SSID" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在のSSIDを読み取るには位置情報へのアクセスが必要です"
+          }
+        }
+      }
+    },
+    "Allow Location Access" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置情報へのアクセスを許可"
+          }
+        }
+      }
+    },
+    "Location access was denied. Enable it in System Settings > Privacy & Security > Location Services." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置情報へのアクセスが拒否されました。システム設定の「プライバシーとセキュリティ」＞「位置情報サービス」で許可してください。"
+          }
+        }
+      }
+    },
+    "Open Location Settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置情報の設定を開く"
+          }
+        }
+      }
+    },
+    "Location access is restricted by macOS or device management" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOSまたはデバイス管理により位置情報へのアクセスが制限されています"
+          }
+        }
+      }
+    },
+    "Current Wi-Fi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在のWi-Fi"
+          }
+        }
+      }
+    },
+    "Add Current Network" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在のネットワークを追加"
+          }
+        }
+      }
+    },
+    "macOS could not provide the current SSID. Check the Wi-Fi connection and Location Services access." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOSから現在のSSIDを取得できませんでした。Wi-Fi接続と位置情報サービスの許可を確認してください。"
+          }
+        }
+      }
+    },
+    "Allowed Wi-Fi Networks" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可するWi-Fiネットワーク"
+          }
+        }
+      }
+    },
+    "Add at least one SSID. Schedules stay stopped until an allowed network is connected." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SSIDを1つ以上追加してください。許可したネットワークに接続するまでスケジュールは停止します。"
+          }
+        }
+      }
+    },
+    "Wi-Fi name (SSID)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wi-Fi名（SSID）"
+          }
+        }
+      }
+    },
+    "Remove Wi-Fi network" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wi-Fiネットワークを削除"
+          }
+        }
+      }
+    },
+    "Add" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加"
+          }
+        }
+      }
+    },
+    "Work Hours" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勤務時間"
           }
         }
       }

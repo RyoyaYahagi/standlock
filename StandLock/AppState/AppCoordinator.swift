@@ -43,6 +43,7 @@ final class AppCoordinator: ObservableObject {
     @Published private(set) var breakProgress: Double = 0
     @Published private(set) var menuBarTimerText: String?
     @Published var breakHistory: BreakHistory = BreakHistory()
+    @Published private(set) var homeWiFiStatus: HomeWiFiMonitor.Status = .stopped
 
     let languageStore = LanguageStore()
     let themeStore = ThemeStore()
@@ -61,6 +62,8 @@ final class AppCoordinator: ObservableObject {
     /// One store shared by the Settings list and the coordinator, so it survives the coordinator
     /// rebuilds that follow a schedule edit.
     private let calendarDetector = CalendarDetector()
+    private let homeWiFiMonitor = HomeWiFiMonitor()
+    private let homeWiFiDetector = HomeWiFiDetector()
     @Published private(set) var availableCalendars: [CalendarInfo] = []
     private let overlayController: OverlayWindowController
     private var eventListenerTask: Task<Void, Never>?
@@ -70,6 +73,9 @@ final class AppCoordinator: ObservableObject {
     private var onboardingWindowDelegate: OnboardingWindowCloseDelegate?
     private var permissionSyncCancellable: AnyCancellable?
     private var calendarStatusCancellable: AnyCancellable?
+    private var homeWiFiStatusCancellable: AnyCancellable?
+    private var isSystemSleeping = false
+    private var isScreenLocked = false
     /// Tracks the calendar grant so the store is reset exactly on the false -> true transition.
     private var lastCalendarAuthorized = false
 
@@ -98,10 +104,16 @@ final class AppCoordinator: ObservableObject {
             .sink { [weak self] _ in
                 self?.handleCalendarAuthorizationChange()
             }
+        homeWiFiStatusCancellable = homeWiFiMonitor.$status
+            .receive(on: RunLoop.main)
+            .removeDuplicates()
+            .sink { [weak self] status in
+                self?.homeWiFiStatus = status
+                self?.synchronizeCoordinatorAvailability()
+            }
         Task { await permissionChecker.pollContinuously() }
-        if !schedules.isEmpty {
-            startCoordinator()
-        }
+        updateHomeWiFiMonitoring()
+        synchronizeCoordinatorAvailability()
         if !hasCompletedOnboarding {
             Task { @MainActor in
                 try? await Task.sleep(for: .seconds(0.5))
@@ -196,6 +208,55 @@ final class AppCoordinator: ObservableObject {
         // land on the next coordinator rebuild.
         applyCalendarPreferences()
         updateMenuBarTimer()
+    }
+
+    func setStandLockEnabled(_ enabled: Bool) {
+        guard preferences.standLockEnabled != enabled else { return }
+        preferences.standLockEnabled = enabled
+        savePreferences()
+        updateHomeWiFiMonitoring()
+        synchronizeCoordinatorAvailability()
+    }
+
+    func setHomeWiFiOnly(_ enabled: Bool) {
+        guard preferences.homeWiFiOnly != enabled else { return }
+        preferences.homeWiFiOnly = enabled
+        savePreferences()
+        if enabled && preferences.standLockEnabled {
+            homeWiFiMonitor.requestLocationAccess()
+        }
+        updateHomeWiFiMonitoring()
+        synchronizeCoordinatorAvailability()
+    }
+
+    func requestHomeWiFiLocationAccess() {
+        homeWiFiMonitor.requestLocationAccess()
+    }
+
+    func openHomeWiFiLocationSettings() {
+        homeWiFiMonitor.openLocationSettings()
+    }
+
+    func addAllowedWiFiSSID(_ ssid: String) {
+        guard !ssid.isEmpty, !preferences.allowedWiFiSSIDs.contains(ssid) else { return }
+        preferences.allowedWiFiSSIDs.append(ssid)
+        savePreferences()
+        synchronizeCoordinatorAvailability()
+    }
+
+    func updateAllowedWiFiSSID(at index: Int, to ssid: String) {
+        guard preferences.allowedWiFiSSIDs.indices.contains(index),
+              preferences.allowedWiFiSSIDs[index] != ssid else { return }
+        preferences.allowedWiFiSSIDs[index] = ssid
+        savePreferences()
+        synchronizeCoordinatorAvailability()
+    }
+
+    func removeAllowedWiFiSSID(at index: Int) {
+        guard preferences.allowedWiFiSSIDs.indices.contains(index) else { return }
+        preferences.allowedWiFiSSIDs.remove(at: index)
+        savePreferences()
+        synchronizeCoordinatorAvailability()
     }
 
     /// The Settings list reads this; refreshed on launch and whenever permissions change.
@@ -300,6 +361,9 @@ final class AppCoordinator: ObservableObject {
     // MARK: - Coordinator Lifecycle
 
     private func startCoordinator(restoring state: EnforcementState = EnforcementState()) {
+        guard allowsBreakScheduling,
+              !isSystemSuspended,
+              schedules.contains(where: \.isEnabled) else { return }
         stopCoordinator()
         let scheduler = ScheduleEvaluator()
         applyCalendarPreferences()
@@ -380,18 +444,84 @@ final class AppCoordinator: ObservableObject {
         // `schedulePaused`, which restores the published flags below through `handleEvent`.
         let pauseRemaining = pausedUntil?.timeIntervalSinceNow
         stopCoordinator()
-        isPaused = false
-        pausedUntil = nil
-        if !schedules.filter(\.isEnabled).isEmpty {
+        if let pauseRemaining, pauseRemaining > 0 {
+            isPaused = true
+            pausedUntil = Date().addingTimeInterval(pauseRemaining)
+        } else {
+            isPaused = false
+            pausedUntil = nil
+        }
+        if allowsBreakScheduling && !isSystemSuspended && schedules.contains(where: \.isEnabled) {
             startCoordinator(restoring: carriedStateForToday())
             if let pauseRemaining, pauseRemaining > 0 {
                 coordinator?.pause(for: pauseRemaining)
             }
         } else {
-            nextBreakTime = nil
-            breakScheduledAt = nil
-            breakProgress = 0
+            clearScheduledBreakState()
         }
+    }
+
+    private var allowsBreakScheduling: Bool {
+        homeWiFiDetector.allowsSchedule(
+            standLockEnabled: preferences.standLockEnabled,
+            homeWiFiOnly: preferences.homeWiFiOnly,
+            currentSSID: homeWiFiMonitor.currentSSID,
+            allowedSSIDs: preferences.allowedWiFiSSIDs
+        )
+    }
+
+    var isWaitingForApprovedWiFi: Bool {
+        preferences.standLockEnabled && preferences.homeWiFiOnly && !allowsBreakScheduling
+    }
+
+    private func updateHomeWiFiMonitoring() {
+        guard preferences.standLockEnabled, preferences.homeWiFiOnly else {
+            homeWiFiMonitor.stopMonitoring()
+            return
+        }
+        homeWiFiMonitor.startMonitoring()
+    }
+
+    /// Applies the global and network gates at the coordinator boundary. A gate closing drops
+    /// its pending slot, so returning to an eligible state starts a new interval from that time.
+    private func synchronizeCoordinatorAvailability() {
+        let hasEnabledSchedules = schedules.contains(where: \.isEnabled)
+        guard preferences.standLockEnabled,
+              (!preferences.homeWiFiOnly || homeWiFiDetector.decision(
+                currentSSID: homeWiFiMonitor.currentSSID,
+                allowedSSIDs: preferences.allowedWiFiSSIDs
+              ) == .allowed),
+              hasEnabledSchedules else {
+            if let coordinator {
+                var state = coordinator.captureEnforcementState()
+                state.discardPendingBreak()
+                carriedEnforcementState = state
+                carriedEnforcementDay = Date()
+                stopCoordinator()
+            }
+            clearScheduledBreakState()
+            return
+        }
+
+        guard !isSystemSuspended, coordinator == nil else { return }
+        let pauseRemaining = pausedUntil?.timeIntervalSinceNow
+        if let pauseRemaining, pauseRemaining <= 0 {
+            isPaused = false
+            pausedUntil = nil
+        }
+        var state = carriedStateForToday()
+        state.discardPendingBreak()
+        startCoordinator(restoring: state)
+        if let pauseRemaining, pauseRemaining > 0 {
+            coordinator?.pause(for: pauseRemaining)
+        }
+    }
+
+    private func clearScheduledBreakState() {
+        nextBreakTime = nil
+        breakScheduledAt = nil
+        breakProgress = 0
+        menuBarTimerText = nil
     }
 
     // MARK: - Event Handling
@@ -472,14 +602,17 @@ final class AppCoordinator: ObservableObject {
     // MARK: - Quick Actions
 
     func skipNextBreak() {
+        guard allowsBreakScheduling else { return }
         coordinator?.skipNextBreak()
     }
 
     func pauseSchedule(for duration: TimeInterval) {
+        guard allowsBreakScheduling else { return }
         coordinator?.pause(for: duration)
     }
 
     func resumeSchedule() {
+        guard preferences.standLockEnabled else { return }
         isPaused = false
         pausedUntil = nil
         breakProgress = 0
@@ -487,8 +620,8 @@ final class AppCoordinator: ObservableObject {
         nextBreakTime = nil
         if let coordinator {
             coordinator.resume()
-        } else if !schedules.filter(\.isEnabled).isEmpty {
-            startCoordinator(restoring: carriedStateForToday())
+        } else {
+            synchronizeCoordinatorAvailability()
         }
     }
 
@@ -502,26 +635,48 @@ final class AppCoordinator: ObservableObject {
         let center = NSWorkspace.shared.notificationCenter
         center.addObserver(forName: NSWorkspace.willSleepNotification, object: nil, queue: .main) { [weak self] _ in
             MainActor.assumeIsolated {
+                self?.isSystemSleeping = true
                 self?.coordinator?.handleSystemSleep()
             }
         }
         center.addObserver(forName: NSWorkspace.didWakeNotification, object: nil, queue: .main) { [weak self] _ in
             MainActor.assumeIsolated {
-                self?.coordinator?.handleSystemWake()
+                guard let self else { return }
+                self.isSystemSleeping = false
+                if self.isScreenLocked {
+                    self.coordinator?.handleScreenLock()
+                } else if self.coordinator != nil {
+                    self.coordinator?.handleSystemWake()
+                } else {
+                    self.synchronizeCoordinatorAvailability()
+                }
             }
         }
 
         let distributed = DistributedNotificationCenter.default()
         distributed.addObserver(forName: .init("com.apple.screenIsLocked"), object: nil, queue: .main) { [weak self] _ in
             MainActor.assumeIsolated {
+                self?.isScreenLocked = true
                 self?.coordinator?.handleScreenLock()
             }
         }
         distributed.addObserver(forName: .init("com.apple.screenIsUnlocked"), object: nil, queue: .main) { [weak self] _ in
             MainActor.assumeIsolated {
-                self?.coordinator?.handleScreenUnlock()
+                guard let self else { return }
+                self.isScreenLocked = false
+                if self.isSystemSleeping {
+                    self.coordinator?.handleSystemSleep()
+                } else if self.coordinator != nil {
+                    self.coordinator?.handleScreenUnlock()
+                } else {
+                    self.synchronizeCoordinatorAvailability()
+                }
             }
         }
+    }
+
+    private var isSystemSuspended: Bool {
+        isSystemSleeping || isScreenLocked
     }
 
     // MARK: - Break Progress
@@ -557,6 +712,10 @@ final class AppCoordinator: ObservableObject {
     }
 
     private func updateMenuBarTimer() {
+        guard preferences.standLockEnabled else {
+            menuBarTimerText = nil
+            return
+        }
         let remaining = nextBreakTime?.timeIntervalSinceNow ?? 0
         menuBarTimerText = formatMenuBarTimer(
             secondsRemaining: remaining,
@@ -570,6 +729,10 @@ final class AppCoordinator: ObservableObject {
     }
 
     private func recalculateProgress() {
+        guard preferences.standLockEnabled else {
+            breakProgress = 0
+            return
+        }
         if isPaused { return }
         breakProgress = calculateBreakProgress(
             scheduledAt: breakScheduledAt,
@@ -634,7 +797,7 @@ final class AppCoordinator: ObservableObject {
 
     func createDefaultSchedule(progressiveEnforcement: Bool = false) {
         let defaultSchedule = Schedule(
-            name: "Work Hours",
+            name: languageStore.string(key: "Work Hours"),
             days: .weekdays,
             windows: [TimeWindow(startHour: 9, startMinute: 0, endHour: 17, endMinute: 0)],
             breakInterval: 45 * 60,

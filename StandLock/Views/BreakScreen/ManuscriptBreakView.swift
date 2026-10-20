@@ -12,7 +12,6 @@ struct ManuscriptBreakView: View {
     let escalationTierIndex: Int
     let nextIntervalLabel: String?
     let onSkip: () -> Void
-    let onEscape: () -> Void
     let onComplete: () -> Void
 
     @State private var remainingSeconds: TimeInterval
@@ -26,7 +25,6 @@ struct ManuscriptBreakView: View {
          escalationTier: Int = 0,
          nextIntervalLabel: String? = nil,
          onSkip: @escaping () -> Void,
-         onEscape: @escaping () -> Void,
          onComplete: @escaping () -> Void) {
         self.level = level
         self.theme = theme
@@ -39,7 +37,6 @@ struct ManuscriptBreakView: View {
         self.escalationTierIndex = escalationTier
         self.nextIntervalLabel = nextIntervalLabel
         self.onSkip = onSkip
-        self.onEscape = onEscape
         self.onComplete = onComplete
         self._remainingSeconds = State(initialValue: totalDuration)
     }
@@ -77,10 +74,8 @@ struct ManuscriptBreakView: View {
                         ActionArea(
                             tier: enforcementTier, palette: palette,
                             preferences: preferences, statistics: statistics,
-                            disciplineLevel: level,
                             escalationTier: escalationTierIndex,
-                            onDismiss: onSkip,
-                            onEscape: onEscape
+                            onDismiss: onSkip
                         )
                     }
                     .padding(.horizontal, 40)

@@ -9,6 +9,7 @@ import Foundation
 final class MockScheduler: SchedulingEngine, @unchecked Sendable {
     var nextBreakTimeToReturn: Date?
     var nextBreakTimes: [UUID: Date] = [:]
+    var nextBreakOffset: TimeInterval?
     var breakDurationToReturn: TimeInterval = 300
     var receivedCycleIndices: [(scheduleID: UUID, index: Int)] = []
     var receivedAfterDates: [Date] = []
@@ -16,6 +17,7 @@ final class MockScheduler: SchedulingEngine, @unchecked Sendable {
     func nextBreakTime(for schedule: Schedule, after date: Date, cycleIndex: Int) -> Date? {
         receivedCycleIndices.append((scheduleID: schedule.id, index: cycleIndex))
         receivedAfterDates.append(date)
+        if let nextBreakOffset { return date.addingTimeInterval(nextBreakOffset) }
         return nextBreakTimes[schedule.id] ?? nextBreakTimeToReturn
     }
     func breakDuration(for schedule: Schedule, breakIndex: Int) -> TimeInterval { breakDurationToReturn }
@@ -86,6 +88,105 @@ func makeSchedule(
 
 @Suite("BreakCoordinator Tests")
 struct BreakCoordinatorTests {
+    @Test @MainActor
+    func skippingShortScheduleDoesNotPostponeLongSchedule() {
+        var short = makeSchedule(breakInterval: 20 * 60)
+        var long = makeSchedule(breakInterval: 55 * 60)
+        // Two adjacent windows cover the whole day, including midnight.
+        let windows = [
+            TimeWindow(startHour: 0, startMinute: 0, endHour: 12, endMinute: 0),
+            TimeWindow(startHour: 12, startMinute: 0, endHour: 0, endMinute: 0)
+        ]
+        short.windows = windows
+        long.windows = windows
+        let coordinator = BreakCoordinator(
+            scheduler: ScheduleEvaluator(), detector: MockDetector(), locker: MockLocker()
+        )
+        let start = Date()
+        coordinator.start(with: [short, long], preferences: AppPreferences(resetIntervalOnSkip: false))
+        defer { coordinator.stop() }
+
+        coordinator.skipNextBreak()
+        coordinator.skipNextBreak()
+
+        let state = coordinator.captureEnforcementState()
+        #expect(state.pendingBreakScheduleID == long.id)
+        if let next = state.pendingBreakDate {
+            #expect(abs(next.timeIntervalSince(start) - 55 * 60) < 1)
+        } else {
+            Issue.record("The long schedule must retain its original deadline")
+        }
+    }
+
+    @Test @MainActor
+    func completedShortBreaksDoNotStarveLongSchedule() async {
+        var short = makeSchedule(breakInterval: 0.08)
+        var long = makeSchedule(breakInterval: 0.23)
+        let windows = [
+            TimeWindow(startHour: 0, startMinute: 0, endHour: 12, endMinute: 0),
+            TimeWindow(startHour: 12, startMinute: 0, endHour: 0, endMinute: 0)
+        ]
+        short.windows = windows
+        long.windows = windows
+        let coordinator = BreakCoordinator(
+            scheduler: ScheduleEvaluator(), detector: MockDetector(), locker: MockLocker()
+        )
+        var fired: [UUID] = []
+        let listener = Task {
+            for await event in coordinator.events {
+                if case .breakStarted(let event) = event {
+                    fired.append(event.scheduleId)
+                    coordinator.completeActiveBreak()
+                }
+            }
+        }
+        coordinator.start(with: [short, long], preferences: AppPreferences())
+        try? await Task.sleep(for: .milliseconds(450))
+        coordinator.stop()
+        listener.cancel()
+        #expect(fired.contains(short.id))
+        #expect(fired.contains(long.id))
+    }
+
+    @Test @MainActor
+    func everyScheduleDeadlineSurvivesRebuild() {
+        let short = makeSchedule()
+        let long = makeSchedule()
+        let shortDate = Date().addingTimeInterval(300)
+        let longDate = Date().addingTimeInterval(600)
+        let scheduler = MockScheduler()
+        scheduler.nextBreakTimes = [short.id: shortDate, long.id: longDate]
+        let coordinator = BreakCoordinator(
+            scheduler: scheduler, detector: MockDetector(), locker: MockLocker()
+        )
+        coordinator.start(with: [short, long], preferences: AppPreferences())
+        let state = coordinator.captureEnforcementState()
+        coordinator.stop()
+
+        scheduler.nextBreakTimes = [short.id: shortDate.addingTimeInterval(100), long.id: longDate.addingTimeInterval(100)]
+        let rebuilt = BreakCoordinator(
+            scheduler: scheduler, detector: MockDetector(), locker: MockLocker()
+        )
+        rebuilt.start(with: [short, long], preferences: AppPreferences(), restoring: state)
+        #expect(rebuilt.captureEnforcementState().scheduledBreakDates == [short.id: shortDate, long.id: longDate])
+        rebuilt.stop()
+    }
+
+    @Test
+    func globalOrNetworkSuspensionDiscardsEveryScheduleDeadline() {
+        let id = UUID()
+        let otherID = UUID()
+        let date = Date().addingTimeInterval(300)
+        var state = EnforcementState(
+            pendingBreakScheduleID: id, pendingBreakDate: date,
+            scheduledBreakDates: [id: date, otherID: date.addingTimeInterval(300)]
+        )
+        state.discardPendingBreak()
+        #expect(state.pendingBreakDate == nil)
+        #expect(state.pendingBreakScheduleID == nil)
+        #expect(state.scheduledBreakDates.isEmpty)
+    }
+
 
     @Test @MainActor
     func breakTriggersAtScheduledTime() async {
@@ -104,6 +205,63 @@ struct BreakCoordinatorTests {
         #expect(locker.showOverlayCalled)
         #expect(locker.lastLevel == .gentle)
         coordinator.stop()
+    }
+
+    @Test @MainActor
+    func stopDismissesAnActiveOverlay() async {
+        let scheduler = MockScheduler()
+        scheduler.nextBreakTimeToReturn = Date().addingTimeInterval(0.05)
+        let locker = MockLocker()
+        let coordinator = BreakCoordinator(scheduler: scheduler, detector: MockDetector(), locker: locker)
+
+        coordinator.start(with: [makeSchedule()], preferences: AppPreferences())
+        try? await Task.sleep(for: .milliseconds(300))
+        #expect(locker.isShowing)
+
+        coordinator.stop()
+
+        #expect(locker.dismissOverlayCalled)
+        #expect(!locker.isShowing)
+    }
+
+    @Test @MainActor
+    func discardedSlotDoesNotFireAfterSuspensionAndRestartUsesFreshBaseline() async {
+        let oldScheduler = MockScheduler()
+        oldScheduler.nextBreakTimeToReturn = Date().addingTimeInterval(0.35)
+        let oldLocker = MockLocker()
+        let oldCoordinator = BreakCoordinator(
+            scheduler: oldScheduler, detector: MockDetector(), locker: oldLocker
+        )
+        let schedule = makeSchedule()
+
+        oldCoordinator.start(with: [schedule], preferences: AppPreferences())
+        var state = oldCoordinator.captureEnforcementState()
+        #expect(state.pendingBreakDate != nil)
+        state.discardPendingBreak()
+        oldCoordinator.stop()
+
+        try? await Task.sleep(for: .milliseconds(450))
+        #expect(!oldLocker.showOverlayCalled)
+        #expect(state.pendingBreakDate == nil)
+
+        let newScheduler = MockScheduler()
+        newScheduler.nextBreakOffset = 0.4
+        let newLocker = MockLocker()
+        let newCoordinator = BreakCoordinator(
+            scheduler: newScheduler, detector: MockDetector(), locker: newLocker
+        )
+        let newBaseline = Date()
+        newCoordinator.start(with: [schedule], preferences: AppPreferences(), restoring: state)
+        let newSlot = newCoordinator.captureEnforcementState().pendingBreakDate
+
+        #expect(newScheduler.receivedAfterDates.last! >= newBaseline)
+        #expect(newSlot != nil)
+        #expect(newSlot!.timeIntervalSince(newBaseline) > 0.2)
+        try? await Task.sleep(for: .milliseconds(100))
+        #expect(!newLocker.showOverlayCalled)
+        try? await Task.sleep(for: .milliseconds(400))
+        #expect(newLocker.showOverlayCalled)
+        newCoordinator.stop()
     }
 
     @Test @MainActor

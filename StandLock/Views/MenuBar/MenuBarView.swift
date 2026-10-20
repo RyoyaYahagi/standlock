@@ -9,6 +9,7 @@ struct MenuBarView: View {
         VStack(alignment: .leading, spacing: 0) {
             VStack(alignment: .leading, spacing: 10) {
                 header
+                activationToggle
                 updateBanner
                 statusSection
                 statsBar
@@ -37,7 +38,16 @@ struct MenuBarView: View {
             Text("StandLock")
                 .font(.headline)
             Spacer()
-            if coordinator.isPaused {
+            if !coordinator.preferences.standLockEnabled {
+                Text("Off")
+                    .font(.caption2)
+                    .fontWeight(.medium)
+                    .padding(.horizontal, 6)
+                    .padding(.vertical, 2)
+                    .background(.secondary.opacity(0.15))
+                    .foregroundStyle(.secondary)
+                    .clipShape(Capsule())
+            } else if coordinator.isPaused {
                 Text("Paused")
                     .font(.caption2)
                     .fontWeight(.medium)
@@ -50,11 +60,37 @@ struct MenuBarView: View {
         }
     }
 
+    private var activationToggle: some View {
+        Button {
+            coordinator.setStandLockEnabled(!coordinator.preferences.standLockEnabled)
+        } label: {
+            HStack(spacing: 8) {
+                Image(systemName: coordinator.preferences.standLockEnabled ? "checkmark.circle.fill" : "pause.circle.fill")
+                    .frame(width: 18)
+                    .foregroundStyle(coordinator.preferences.standLockEnabled ? .green : .secondary)
+                Text(LocalizedStringKey(
+                    coordinator.preferences.standLockEnabled ? "StandLock: ON" : "StandLock: OFF"
+                ))
+                Spacer()
+            }
+        }
+        .buttonStyle(MenuBarRowStyle())
+        .accessibilityHint("Turns all break management features on or off")
+    }
+
     // MARK: - Status
 
     @ViewBuilder
     private var statusSection: some View {
-        if coordinator.isBreakActive {
+        if !coordinator.preferences.standLockEnabled {
+            Label("Break management is off", systemImage: "pause.circle")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+        } else if coordinator.isWaitingForApprovedWiFi {
+            Label("Waiting for an allowed Wi-Fi network", systemImage: "wifi.exclamationmark")
+                .font(.subheadline)
+                .foregroundStyle(.orange)
+        } else if coordinator.isBreakActive {
             Label("Break in progress", systemImage: "figure.stand")
                 .font(.subheadline)
                 .foregroundStyle(.green)

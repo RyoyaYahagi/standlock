@@ -14,6 +14,8 @@ public struct ScreenSharingDetector: Sendable {
     }
 
     public func isScreenBeingShared() async -> Bool {
-        processNames().contains { $0 == "ScreensharingAgent" || $0 == "screencaptureui" }
+        // The screenshot utility can remain running after a screenshot or recording
+        // ends. Its presence alone is not evidence of an active capture session.
+        processNames().contains { $0 == "ScreensharingAgent" }
     }
 }

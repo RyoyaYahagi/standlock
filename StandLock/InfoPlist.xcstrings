@@ -10,6 +10,12 @@
             "state" : "new",
             "value" : "StandLock Debug"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLock"
+          }
         }
       }
     },
@@ -20,6 +26,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "StandLock"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "StandLock"
           }
         }
@@ -40,6 +52,12 @@
             "state" : "translated",
             "value" : "StandLock, Katı modda molalar sırasında klavye ve fare girdisini engellemek için erişilebilirliği kullanır."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLockはStrictモードの休憩中にキーボードとマウスの入力をブロックするため、アクセシビリティを使用します。"
+          }
         }
       }
     },
@@ -57,6 +75,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "StandLock, toplantılarda molaları ertelemek için takviminizi okur."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会議中の休憩を延期するため、StandLockはカレンダーを読み取ります。"
           }
         }
       }
@@ -76,6 +100,12 @@
             "state" : "translated",
             "value" : "StandLock, toplantılarda molaları ertelemek için takviminizi okur."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会議中の休憩を延期するため、StandLockはカレンダーを読み取ります。"
+          }
         }
       }
     },
@@ -87,6 +117,48 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Copyright © 2026 StandLock"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "著作権 © 2026 StandLock"
+          }
+        }
+      }
+    },
+    "NSLocationUsageDescription" : {
+      "comment" : "Permission prompt shown by macOS.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home Wi-Fi onlyが有効な場合に、接続中のWi-Fi名（SSID）を取得する目的だけで位置情報サービスを利用します。地理座標の取得、利用、保存は行いません。"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLock uses Location Services only to read the current Wi-Fi network name (SSID) when Home Wi-Fi only is enabled. It does not read, use, or store geographic coordinates."
+          }
+        }
+      }
+    },
+    "NSLocationWhenInUseUsageDescription" : {
+      "comment" : "Permission prompt shown by macOS.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home Wi-Fi onlyが有効な場合に、接続中のWi-Fi名（SSID）を取得する目的だけで位置情報サービスを利用します。地理座標の取得、利用、保存は行いません。"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandLock uses Location Services only to read the current Wi-Fi network name (SSID) when Home Wi-Fi only is enabled. It does not read, use, or store geographic coordinates."
           }
         }
       }

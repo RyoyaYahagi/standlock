@@ -12,7 +12,11 @@ struct QuickActionsView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            if coordinator.isPaused {
+            if !coordinator.preferences.standLockEnabled {
+                Label("Break management is off", systemImage: "pause.circle")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else if coordinator.isPaused {
                 Button {
                     coordinator.resumeSchedule()
                 } label: {

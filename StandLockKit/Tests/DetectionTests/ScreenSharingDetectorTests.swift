@@ -15,10 +15,10 @@ struct ScreenSharingDetectorTests {
         #expect(result)
     }
 
-    @Test func returnsTrueWhenScreencaptureuiRunning() async {
+    @Test func screenshotUtilityDoesNotDeferBreaks() async {
         let detector = ScreenSharingDetector(processNames: { ["Finder", "screencaptureui"] })
         let result = await detector.isScreenBeingShared()
-        #expect(result)
+        #expect(!result)
     }
 
     @Test func returnsFalseWhenProcessListEmpty() async {

@@ -28,4 +28,16 @@ struct LanguageResolutionTests {
     @Test func selectionWithRegionTagMatchesByLanguageCode() {
         #expect(resolveLanguage(selection: "tr-TR", available: ["en", "tr"], systemPreferred: ["en"]) == "tr")
     }
+
+    @Test func explicitJapaneseSelectionWins() {
+        #expect(resolveLanguage(selection: "ja", available: ["en", "ja", "tr"], systemPreferred: ["en"]) == "ja")
+    }
+
+    @Test func japaneseSystemLanguageUsesJapaneseCatalog() {
+        #expect(resolveLanguage(selection: nil, available: ["en", "ja", "tr"], systemPreferred: ["ja-JP", "en"]) == "ja")
+    }
+
+    @Test func systemEnglishRemainsEnglishWhenJapaneseIsAvailable() {
+        #expect(resolveLanguage(selection: nil, available: ["en", "ja", "tr"], systemPreferred: ["en-US", "ja-JP"]) == "en")
+    }
 }

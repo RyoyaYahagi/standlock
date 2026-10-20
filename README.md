@@ -73,13 +73,14 @@ Enable progressive enforcement on any schedule and each consecutive skip makes t
 - Day selection: weekdays, weekends, every day, or custom
 - Pomodoro-style repetition cycles with short/long break patterns
 - Alternating work intervals: a schedule can cycle through up to 6 intervals instead of one (e.g. 58 min sitting, then 28 min standing), each with an optional label the break screen shows as what's coming next
-- Configurable daily skip limits per discipline level, set in Settings › General (Strict has none)
+- Skips are not capped per day and remain counted in break statistics
 
 <img src="assets/schedules.png" width="515" alt="Schedules window showing time windows, day selection and discipline level">
 
 ### Context Awareness
 
-- Defers breaks during meetings (camera or microphone active), screen recordings and remote screen sharing sessions
+- Defers breaks during meetings (camera or microphone active) and remote screen sharing sessions
+- Screen sharing detection checks for the macOS `ScreensharingAgent` process. The Screenshot utility is excluded because it can remain running after capture ends; screen recordings and sharing in other apps are not detected by this check.
 - Integrates with Calendar to skip during upcoming events, either every calendar or only the ones you pick
 - Detects idle time: if you've already been away for at least a minute (or the full break length, if longer), the break counts as completed
 - Camera and microphone detection can defer the break, reduce it to Gentle, or be ignored; screen sharing and idle detection are on or off, and calendar integration adds a choice of which calendars count

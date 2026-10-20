@@ -11,12 +11,9 @@ public enum DisciplineLevel: String, Codable, Sendable, CaseIterable {
         }
     }
 
-    public func dailySkipLimit(preferences: AppPreferences) -> Int? {
-        switch self {
-        case .gentle: preferences.gentleDailySkipLimit
-        case .firm: preferences.firmDailySkipLimit
-        case .strict: nil
-        }
+    /// Kept for compatibility with callers that stored per-level limits; skips are no longer capped.
+    public func dailySkipLimit(preferences _: AppPreferences) -> Int? {
+        nil
     }
 
     public var description: String {

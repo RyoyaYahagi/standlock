@@ -65,7 +65,6 @@ final class OverlayWindowController: LockPresenting {
                 statistics: statistics, escalationTier: escalationTier,
                 nextIntervalLabel: nextIntervalLabel,
                 onSkip: { [weak self] in self?.handleSkip() },
-                onEscape: { [weak self] in self?.handleEscape() },
                 onComplete: { [weak self] in self?.handleComplete() }
             )
             window.setContent(LocalizedRoot(store: languageStore) { contentView })
